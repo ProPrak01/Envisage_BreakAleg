@@ -2609,6 +2609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 261298838270150175}
   - component: {fileID: 642749501590789286}
+  - component: {fileID: 642749501590789287}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2631,12 +2632,28 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.01328468, y: 0.016523054, z: 0.011389226}
   m_Center: {x: -0.00022720994, y: -0.00041388033, z: 0.0013914005}
+--- !u!114 &642749501590789287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642749501590789285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  objectPrefab: {fileID: 919132149155446097, guid: fcb6ef4eb9476487a8d6b066bf7b25c5,
+    type: 3}
+  attachKey: 101
 --- !u!4 &738723648667107808
 Transform:
   m_ObjectHideFlags: 0
@@ -2726,6 +2743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2919234836473597023}
   - component: {fileID: 2919234836473597024}
+  - component: {fileID: 2919234836473597025}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -2804,6 +2822,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.015110676, y: 0.014260503, z: 0.0114476895}
   m_Center: {x: -0.00006756425, y: 0.0007786601, z: 0.001680295}
+--- !u!114 &2919234836473597025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578561687540209381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  objectPrefab: {fileID: 919132149155446097, guid: d92111721adc34e618bf613071ed6bf6,
+    type: 3}
+  attachKey: 101
 --- !u!33 &3147924100230329346
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2949,6 +2983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3846429132055314342}
   - component: {fileID: 4479553608977655069}
+  - component: {fileID: 4479553608977655070}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -2977,6 +3012,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.014746126, y: 0.01668695, z: 0.0117932055}
   m_Center: {x: 0.00001644671, y: -0.0010134402, z: 0.0015687795}
+--- !u!114 &4479553608977655070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479553608977655068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  objectPrefab: {fileID: 919132149155446097, guid: b2f8234b2a01b4a789e94458f6dcf39c,
+    type: 3}
+  attachKey: 101
 --- !u!4 &4897054550538177368
 Transform:
   m_ObjectHideFlags: 0
@@ -3019,6 +3070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897054550538177368}
   - component: {fileID: 5241633096238469603}
+  - component: {fileID: 5241633096238469604}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -3047,6 +3099,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.013249515, y: 0.0120738195, z: 0.009820348}
   m_Center: {x: -0.0008544997, y: 0.0011340892, z: 0.00061578036}
+--- !u!114 &5241633096238469604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241633096238469602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  objectPrefab: {fileID: 919132149155446097, guid: ec921da28274547248f9e85b6fdadaff,
+    type: 3}
+  attachKey: 101
 --- !u!1 &5349581539467647069
 GameObject:
   m_ObjectHideFlags: 0
