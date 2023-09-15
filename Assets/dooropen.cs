@@ -23,7 +23,7 @@ public class dooropen : MonoBehaviour
         }
         
         initialPosition = transform.position;
-        targetPosition = initialPosition + Vector3.up * 2.0f; // Move 2 units up
+        targetPosition = initialPosition + Vector3.up * 4.0f; // Move 2 units up
     }
 
     void Update()
@@ -57,7 +57,7 @@ public class dooropen : MonoBehaviour
         float startTime = Time.time;
         Vector3 startPosition = transform.position;
 
-        while (Time.time - startTime < 1.0f / moveSpeed)
+        while (Time.time - startTime < 3.0f / moveSpeed)
         {
             float journeyLength = Vector3.Distance(startPosition, targetPosition);
             float distanceCovered = (Time.time - startTime) * moveSpeed;
