@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class dooropen : MonoBehaviour
 {
+    public bool[] checkall;
     public bool i ;
     bool isMoving = false;
     Vector3 initialPosition;
@@ -20,7 +21,22 @@ public class dooropen : MonoBehaviour
 
     void Update()
     {
-        i = FindObjectOfType<dooropen>().i;
+
+        //i = FindObjectOfType<dooropen>().i;
+        for(int j = 1; j <= 16; j++)
+        {
+            if (checkall[j] == false)
+            {
+                i = false;
+                break;
+            }
+            else
+            {
+                i = true;
+            }
+        }
+
+
 
         if (i && !isMoving)
         {
