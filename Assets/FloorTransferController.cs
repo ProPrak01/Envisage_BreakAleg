@@ -33,7 +33,7 @@ public class TransferBlockController : MonoBehaviour
                 GameObject player = GameObject.FindGameObjectWithTag(playerTag);
 
                 // Check if a player object is found.
-                if (player != null)
+                if (player != null  && transform.childCount == 0)
                 {
                     // Calculate the distance between the player and the block.
                     float distance = Vector3.Distance(player.transform.position, transform.position);
@@ -45,6 +45,26 @@ public class TransferBlockController : MonoBehaviour
                         TransferChildObject(player, transform);
                     }
                 }
+                /**
+                if (transform.childCount > 0 && player.childCount < 2)
+                {
+                    // Detach the child object from the block.
+                    Transform child = transform.GetChild(0);
+
+                    // Make it a child of the player again.
+                    child.SetParent(player.transform);
+
+                    // Reset the position relative to the player.
+                    child.localPosition = new Vector3(0f,0f,0f);
+
+                    // Scale the child object by a factor of 1 (normal size).
+                    child.localScale = Vector3.one;
+
+                    // Rotate the child object back to its original orientation.
+                    child.localRotation = Quaternion.identity;
+                }
+                **/
+                
             }
         }
         else
