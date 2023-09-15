@@ -27,7 +27,7 @@ public class Attacher : MonoBehaviour
             blockRenderer.material = glowMaterial;
 
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(attachKey) && instantiatedObject == null)
+            if (Input.GetKeyDown(attachKey) /**&& instantiatedObject == null**/)
             {
                 // Find the player with the "Player" tag.
                 GameObject player = GameObject.FindGameObjectWithTag(playerTag);
@@ -45,6 +45,8 @@ public class Attacher : MonoBehaviour
                         instantiatedObject = Instantiate(objectPrefab, player.transform);
 
                         instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
+                        instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
+
                     }
                 }
             }
