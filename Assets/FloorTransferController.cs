@@ -128,9 +128,10 @@ public class TransferBlockController : MonoBehaviour
 
             // Rotate the child object by 45 degrees on the Y-axis.
             child.localRotation = Quaternion.Euler(0f, 180f, 0f);
+            
             if(child.tag == numberneeded.ToString())
             {
-                FindObjectOfType<dooropen>().checkall[idofemptyblock] = true;
+                FindObjectOfType<dooropen>().checkall[idofemptyblock]= true;
             }
             
         }

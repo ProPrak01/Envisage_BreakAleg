@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class dooropen : MonoBehaviour
 {
-    public bool[] checkall;
+    public List<bool> checkall = new List<bool>();
+   // public bool[] checkall = new bool[20];
     public bool i ;
     bool isMoving = false;
     Vector3 initialPosition;
@@ -15,15 +16,21 @@ public class dooropen : MonoBehaviour
     void Start()
     {
         i = false;
+        
+        for (int j = 0; j < 11; j++)
+        {
+            checkall.Insert(j,false);
+        }
+        
         initialPosition = transform.position;
         targetPosition = initialPosition + Vector3.up * 2.0f; // Move 2 units up
     }
 
     void Update()
     {
-
+        
         //i = FindObjectOfType<dooropen>().i;
-        for(int j = 1; j <= 16; j++)
+        for(int j = 0; j <= 10; j++)
         {
             if (checkall[j] == false)
             {
