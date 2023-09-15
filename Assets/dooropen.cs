@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class dooropen : MonoBehaviour
 {
-    public bool i = false;
+    public bool i ;
     bool isMoving = false;
     Vector3 initialPosition;
     Vector3 targetPosition;
@@ -13,6 +13,7 @@ public class dooropen : MonoBehaviour
 
     void Start()
     {
+        i = false;
         initialPosition = transform.position;
         targetPosition = initialPosition + Vector3.up * 2.0f; // Move 2 units up
     }

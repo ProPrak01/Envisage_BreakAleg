@@ -20,6 +20,7 @@ public class TransferBlockController : MonoBehaviour
     private void Update()
     {
         // Check if the player is near the block.
+
         if (isPlayerNear)
         {
             // Apply the glow material when the player is near.
@@ -87,7 +88,7 @@ public class TransferBlockController : MonoBehaviour
             child.localScale = new Vector3(1f, 1f, 1f);
 
             // Rotate the child object by 45 degrees on the Y-axis.
-            child.localRotation = Quaternion.Euler(0f, 45f, 0f);
+            child.localRotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
 }
