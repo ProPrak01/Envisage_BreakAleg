@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4372,7 +4372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idofemptyblock: 2
+  idofemptyblock: 1
   numberneeded: 0
   playerTag: Player
   interactionDistance: 2
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idofemptyblock: 4
+  idofemptyblock: 3
   numberneeded: 0
   playerTag: Player
   interactionDistance: 2
@@ -4948,7 +4948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idofemptyblock: 3
+  idofemptyblock: 2
   numberneeded: 0
   playerTag: Player
   interactionDistance: 2
