@@ -1169,8 +1169,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
     - target: {fileID: 919132149155446097, guid: 153d2505ce31e43dfa104996ffd3ea88,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 919132149155446097, guid: 153d2505ce31e43dfa104996ffd3ea88,
+        type: 3}
       propertyPath: m_Name
-      value: Door(2.0)
+      value: EXIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 153d2505ce31e43dfa104996ffd3ea88,
+        type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4766,7 +4777,7 @@ PrefabInstance:
     - target: {fileID: 2827139803560680852, guid: c1d569ffbc55f4c3a8168644769a2bad,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 3827833764468989957, guid: c1d569ffbc55f4c3a8168644769a2bad,
         type: 3}

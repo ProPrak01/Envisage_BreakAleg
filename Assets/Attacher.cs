@@ -32,11 +32,14 @@ public class Attacher : MonoBehaviour
             {
                 player = GameObject.FindGameObjectWithTag(playerTag);
                 attachKey = KeyCode.E;
+               // attachKey = KeyCode.O;    // shuffledcontrolled
+
             }
             else if (p1p2 == 2)
             {
                 player = GameObject.FindGameObjectWithTag(player2Tag);
                 attachKey = KeyCode.O;
+                // attachKey = KeyCode.E;    // shuffledcontrolled
 
 
             }
