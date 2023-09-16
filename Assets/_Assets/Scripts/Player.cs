@@ -1,21 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
-
+    public InputAction playerControls;
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
     }
-
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
     private bool isWalking;
     
     private void Update()
     {
+        /**
         Vector2 inputVector = new Vector2(0, 0);
 
         if(Input.GetKey(KeyCode.W))
@@ -38,10 +47,12 @@ public class Player : MonoBehaviour
             inputVector.x = -1;
         }
 
-
+        
         inputVector = inputVector.normalized;
+        **/
+        //  Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        Vector3 moveDir = playerControls.ReadValue<Vector3>();
 
-        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         transform.position += moveDir*moveSpeed*Time.deltaTime;
 
         isWalking = moveDir != Vector3.zero;
