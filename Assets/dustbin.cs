@@ -3,6 +3,8 @@ using UnityEngine;
 public class dustbin : MonoBehaviour
 {
     public string playerTag = "Player"; // Tag of the player GameObject.
+    public string player2Tag = "Player2"; // Tag of the player GameObject.
+
     public float interactionDistance = 2.0f; // Distance to trigger interaction with the block.
     public Material glowMaterial; // Material to apply when the player is near the block.
     public Material originalMaterial;
@@ -10,6 +12,8 @@ public class dustbin : MonoBehaviour
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer blockRenderer; // Reference to the block's renderer.
 
+    public KeyCode attachKey = KeyCode.E; // The key to press to attach/detach the object.
+    public float p1p2 = 0;
 
 
     private void Start()
@@ -27,10 +31,21 @@ public class dustbin : MonoBehaviour
         {
             // Apply the glow material when the player is near.
             blockRenderer.material = glowMaterial;
-            GameObject player = GameObject.FindGameObjectWithTag(playerTag);
+            GameObject player = null;
+            if (p1p2 == 1)
+            {
 
+                player = GameObject.FindGameObjectWithTag(playerTag);
+                attachKey = KeyCode.E;
+            }
+            else if (p1p2 == 2)
+            {
+
+                player = GameObject.FindGameObjectWithTag(player2Tag);
+                attachKey = KeyCode.O;
+            }
             // Check if the player presses the attach key.
-            if (Input.GetKeyDown(KeyCode.E)  /**&& Time.time - lastTransferTime >= transferCooldown**/)
+            if (Input.GetKeyDown(attachKey)  /**&& Time.time - lastTransferTime >= transferCooldown**/)
             {
                 // Find the player with the "Player" tag.
 
@@ -70,6 +85,12 @@ public class dustbin : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = true;
+            p1p2 = 1;
+        }
+        else if (other.CompareTag(player2Tag))
+        {
+            isPlayerNear = true;
+            p1p2 = 2;
         }
     }
 
@@ -79,6 +100,12 @@ public class dustbin : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = false;
+            p1p2 = 0;
+        }
+        else if (other.CompareTag(player2Tag))
+        {
+            isPlayerNear = false;
+            p1p2 = 0;
         }
     }
 
