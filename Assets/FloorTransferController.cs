@@ -133,7 +133,12 @@ public class TransferBlockController : MonoBehaviour
             {
                 FindObjectOfType<dooropen>().checkall[idofemptyblock]= true;
             }
-            
+            else
+            {
+                FindObjectOfType<dooropen>().checkall[idofemptyblock] = false;
+
+            }
+
         }
     }
 }
