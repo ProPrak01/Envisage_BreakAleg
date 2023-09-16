@@ -198,6 +198,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 456aff8d8c93b494d9387cd32bd0346d,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 919132149155446097, guid: 456aff8d8c93b494d9387cd32bd0346d,
+        type: 3}
       propertyPath: m_Name
       value: Trash bin
       objectReference: {fileID: 0}
@@ -274,7 +280,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 23.4
+  field of view: 26.8
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1083,7 +1089,7 @@ Transform:
   m_GameObject: {fileID: 901670141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.5, y: 0, z: -0.79}
+  m_LocalPosition: {x: -10.55, y: 0, z: -3.82}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2700,9 +2706,9 @@ GameObject:
   - component: {fileID: 3469287838644417479}
   - component: {fileID: 3469287838644417480}
   m_Layer: 0
-  m_Name: empty (12)
+  m_Name: ID8N1
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2720,9 +2726,9 @@ GameObject:
   - component: {fileID: 3469287838510587049}
   - component: {fileID: 3469287838510587050}
   m_Layer: 0
-  m_Name: empty (11)
+  m_Name: ID7N1
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2740,9 +2746,9 @@ GameObject:
   - component: {fileID: 3469287838518385129}
   - component: {fileID: 3469287838518385130}
   m_Layer: 0
-  m_Name: empty (14)
+  m_Name: ID9N3
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2760,9 +2766,9 @@ GameObject:
   - component: {fileID: 3469287838445339740}
   - component: {fileID: 3469287838445339741}
   m_Layer: 0
-  m_Name: empty (4)
+  m_Name: ID1N1
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2780,9 +2786,9 @@ GameObject:
   - component: {fileID: 3469287838219316772}
   - component: {fileID: 3469287838219316773}
   m_Layer: 0
-  m_Name: empty (6)
+  m_Name: ID4N4
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2800,9 +2806,9 @@ GameObject:
   - component: {fileID: 3469287838216495058}
   - component: {fileID: 3469287838216495059}
   m_Layer: 0
-  m_Name: empty (1)
+  m_Name: ID3N3
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2820,9 +2826,9 @@ GameObject:
   - component: {fileID: 3469287836989887537}
   - component: {fileID: 3469287836989887538}
   m_Layer: 0
-  m_Name: empty (10)
+  m_Name: ID6N2
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2840,9 +2846,9 @@ GameObject:
   - component: {fileID: 3469287836803632958}
   - component: {fileID: 3469287836803632959}
   m_Layer: 0
-  m_Name: empty (5)
+  m_Name: ID2N3
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2860,9 +2866,9 @@ GameObject:
   - component: {fileID: 3469287836609833822}
   - component: {fileID: 3469287836609833823}
   m_Layer: 0
-  m_Name: empty (2)
+  m_Name: ID0N4
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2900,9 +2906,9 @@ GameObject:
   - component: {fileID: 3469287837307641213}
   - component: {fileID: 3469287837307641214}
   m_Layer: 0
-  m_Name: empty (8)
+  m_Name: ID5N4
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2960,9 +2966,9 @@ GameObject:
   - component: {fileID: 3469287837085667680}
   - component: {fileID: 3469287837085667681}
   m_Layer: 0
-  m_Name: empty (13)
+  m_Name: ID10N2
   m_TagString: Floor
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3954,9 +3960,13 @@ MonoBehaviour:
   idofemptyblock: 0
   numberneeded: 4
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287836609833823
 BoxCollider:
@@ -4002,9 +4012,13 @@ MonoBehaviour:
   idofemptyblock: 2
   numberneeded: 3
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287836803632959
 BoxCollider:
@@ -4050,9 +4064,13 @@ MonoBehaviour:
   idofemptyblock: 6
   numberneeded: 2
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287836989887538
 BoxCollider:
@@ -4098,9 +4116,13 @@ MonoBehaviour:
   idofemptyblock: 10
   numberneeded: 2
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837085667681
 BoxCollider:
@@ -4146,9 +4168,13 @@ MonoBehaviour:
   idofemptyblock: 16
   numberneeded: 0
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837086382754
 BoxCollider:
@@ -4194,9 +4220,13 @@ MonoBehaviour:
   idofemptyblock: 8
   numberneeded: 0
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837176241995
 BoxCollider:
@@ -4242,9 +4272,13 @@ MonoBehaviour:
   idofemptyblock: 5
   numberneeded: 4
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837307641214
 BoxCollider:
@@ -4290,9 +4324,13 @@ MonoBehaviour:
   idofemptyblock: 1
   numberneeded: 2
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837383165997
 BoxCollider:
@@ -4338,9 +4376,13 @@ MonoBehaviour:
   idofemptyblock: 6
   numberneeded: 0
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837685175518
 BoxCollider:
@@ -4386,9 +4428,13 @@ MonoBehaviour:
   idofemptyblock: 11
   numberneeded: 0
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287837972802817
 BoxCollider:
@@ -4434,9 +4480,13 @@ MonoBehaviour:
   idofemptyblock: 3
   numberneeded: 3
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287838216495059
 BoxCollider:
@@ -4482,9 +4532,13 @@ MonoBehaviour:
   idofemptyblock: 4
   numberneeded: 4
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287838219316773
 BoxCollider:
@@ -4530,9 +4584,13 @@ MonoBehaviour:
   idofemptyblock: 1
   numberneeded: 1
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287838445339741
 BoxCollider:
@@ -4578,9 +4636,13 @@ MonoBehaviour:
   idofemptyblock: 7
   numberneeded: 1
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287838510587050
 BoxCollider:
@@ -4626,9 +4688,13 @@ MonoBehaviour:
   idofemptyblock: 9
   numberneeded: 3
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287838518385130
 BoxCollider:
@@ -4674,9 +4740,13 @@ MonoBehaviour:
   idofemptyblock: 8
   numberneeded: 1
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
+  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
+  attachKey: 101
+  p1p2: 0
   transferCooldown: 1
 --- !u!65 &3469287838644417480
 BoxCollider:

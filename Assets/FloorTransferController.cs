@@ -5,14 +5,20 @@ public class TransferBlockController : MonoBehaviour
     public int idofemptyblock;
     public int numberneeded;
     public string playerTag = "Player"; // Tag of the player GameObject.
+    public string player2Tag = "Player2"; // Tag of the player GameObject.
+
     public float interactionDistance = 2.0f; // Distance to trigger interaction with the block.
     public Material glowMaterial; // Material to apply when the player is near the block.
+    public Material glowMaterial2; // Material to apply when the player is near the block.
+
     public Material originalMaterial;
 
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer blockRenderer; // Reference to the block's renderer.
-    
 
+    public KeyCode attachKey = KeyCode.E; // The key to press to attach/detach the object.
+
+    public float p1p2 = 0;
     public float transferCooldown = 1.0f; // Cooldown time between transfers.
     private float lastTransferTime = 0f; // Time of the last transfer.
 
@@ -31,11 +37,24 @@ public class TransferBlockController : MonoBehaviour
         if (isPlayerNear)
         {
             // Apply the glow material when the player is near.
-            blockRenderer.material = glowMaterial;
-            GameObject player = GameObject.FindGameObjectWithTag(playerTag);
+          //  blockRenderer.material = glowMaterial;
+            GameObject player = null;
+            if (p1p2 == 1)
+            {
+                blockRenderer.material = glowMaterial;
 
+                player = GameObject.FindGameObjectWithTag(playerTag);
+                attachKey = KeyCode.E;
+            }
+            else if (p1p2 == 2)
+            {
+                blockRenderer.material = glowMaterial2;
+
+                player = GameObject.FindGameObjectWithTag(player2Tag);
+                attachKey = KeyCode.O;
+            }
             // Check if the player presses the attach key.
-            if (Input.GetKeyDown(KeyCode.E) && player.transform.childCount == 2 /**&& Time.time - lastTransferTime >= transferCooldown**/)
+            if (Input.GetKeyDown(attachKey) && player.transform.childCount == 2 /**&& Time.time - lastTransferTime >= transferCooldown**/)
             {
                 // Find the player with the "Player" tag.
 
@@ -57,7 +76,7 @@ public class TransferBlockController : MonoBehaviour
 
             }
 
-            else if(Input.GetKeyDown(KeyCode.E) && player.transform.childCount == 1)
+            else if(Input.GetKeyDown(attachKey) && player.transform.childCount == 1)
             {
                 temp();
             }
@@ -70,7 +89,17 @@ public class TransferBlockController : MonoBehaviour
     }
     void temp()
     {
-        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
+        GameObject player= null;
+        if (p1p2 == 1)
+        {
+             player = GameObject.FindGameObjectWithTag(playerTag);
+
+        }
+        else if (p1p2 == 2)
+        {
+            player = GameObject.FindGameObjectWithTag(player2Tag);
+
+        }
 
         if (transform.childCount > 0 && player.transform.childCount < 2)
         {
@@ -99,6 +128,12 @@ public class TransferBlockController : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = true;
+            p1p2 = 1;
+        }
+        else if (other.CompareTag(player2Tag))
+        {
+            isPlayerNear = true;
+            p1p2 = 2;
         }
     }
 
@@ -108,6 +143,12 @@ public class TransferBlockController : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = false;
+            p1p2 = 0;
+        }
+        else if (other.CompareTag(player2Tag))
+        {
+            isPlayerNear = false;
+            p1p2 = 0;
         }
     }
 
