@@ -13,9 +13,10 @@ public class Attacher : MonoBehaviour
     private GameObject instantiatedObject; // Reference to the instantiated object.
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer blockRenderer; // Reference to the block's renderer.
-
+    
     private void Start()
     {
+       
         blockRenderer = GetComponentInChildren<Renderer>();
         originalMaterial = blockRenderer.material;
     }
