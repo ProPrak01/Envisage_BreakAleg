@@ -51,6 +51,7 @@ public class Player2 : MonoBehaviour
         inputVector = inputVector.normalized;
         **/
         //  Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        
         Vector3 moveDir = playerControls.ReadValue<Vector3>();
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
