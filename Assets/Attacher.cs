@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Attacher : MonoBehaviour
 {
-    PhotonView view;
+    //PhotonView view;
     public string playerTag = "Player"; // Tag of the player GameObject.
     public string player2Tag = "Player2"; // Tag of the player GameObject.
     public float p1p2;
@@ -49,7 +49,7 @@ public class Attacher : MonoBehaviour
 
             }
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(attachKey) && view.IsMine /**&& instantiatedObject == null**/)
+            if (Input.GetKeyDown(attachKey)  /**&& instantiatedObject == null**/)
             {
               
                 // Find the player with the "Player" tag.
