@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class Attacher : MonoBehaviour
 {
+    PhotonView view;
     public string playerTag = "Player"; // Tag of the player GameObject.
     public string player2Tag = "Player2"; // Tag of the player GameObject.
     public float p1p2;
@@ -48,7 +49,7 @@ public class Attacher : MonoBehaviour
 
             }
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(attachKey) /**&& instantiatedObject == null**/)
+            if (Input.GetKeyDown(attachKey) && view.IsMine /**&& instantiatedObject == null**/)
             {
               
                 // Find the player with the "Player" tag.
@@ -63,11 +64,11 @@ public class Attacher : MonoBehaviour
                     if (distance <= interactionDistance)
                     {
                         // Instantiate the objectPrefab and make it a child of the player.
-                        instantiatedObject =  PhotonNetwork.Instantiate("objectPrefab", player.transform.position, Quaternion.identity);
-                       // instantiatedObject = Instantiate(objectPrefab, player.transform);
+                       // instantiatedObject =  PhotonNetwork.Instantiate("objectPrefab", player.transform.position, Quaternion.identity);
+                        instantiatedObject = Instantiate(objectPrefab, player.transform);
 
-                        instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
-                        instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
+                       // instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
+                      //  instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
 
                     }
                 }
