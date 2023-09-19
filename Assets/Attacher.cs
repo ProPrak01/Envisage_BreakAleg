@@ -67,8 +67,8 @@ public class Attacher : MonoBehaviour
                        // instantiatedObject =  PhotonNetwork.Instantiate("objectPrefab", player.transform.position, Quaternion.identity);
                         instantiatedObject = Instantiate(objectPrefab, player.transform);
 
-                       // instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
-                      //  instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
+                        instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
+                        instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
 
                     }
                 }
