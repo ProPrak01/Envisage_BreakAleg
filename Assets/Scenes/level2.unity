@@ -1156,6 +1156,11 @@ PrefabInstance:
       propertyPath: playerControls.m_SingletonActionBindings.Array.data[6].m_Action
       value: Player Controls
       objectReference: {fileID: 0}
+    - target: {fileID: 8391004942294663362, guid: c1d569ffbc55f4c3a8168644769a2bad,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

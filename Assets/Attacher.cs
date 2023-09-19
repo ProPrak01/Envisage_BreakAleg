@@ -1,4 +1,7 @@
+using Photon.Pun;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
+using UnityEngine.UIElements;
 
 public class Attacher : MonoBehaviour
 {
@@ -60,7 +63,8 @@ public class Attacher : MonoBehaviour
                     if (distance <= interactionDistance)
                     {
                         // Instantiate the objectPrefab and make it a child of the player.
-                        instantiatedObject = Instantiate(objectPrefab, player.transform);
+                        instantiatedObject =  PhotonNetwork.Instantiate("objectPrefab", player.transform.position, Quaternion.identity);
+                       // instantiatedObject = Instantiate(objectPrefab, player.transform);
 
                         instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
                         instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
