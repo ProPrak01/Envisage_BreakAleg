@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 5274027683405970013}
   - component: {fileID: 2993102924550936264}
   m_Layer: 0
-  m_Name: Player (1)
+  m_Name: Player 2
   m_TagString: Player2
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8246776468480958033
 Transform:
   m_ObjectHideFlags: 0
@@ -98,6 +98,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  playerControls:
+    m_Name: Player Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2454157c-b944-4f4e-a5d7-f36428cd2224
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 3D Vector
+      m_Id: e12b62cf-b1cd-404c-b7ee-ee9be770bf6b
+      m_Path: 3DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 4
+    - m_Name: up
+      m_Id: fb9a2c1d-c74f-4f57-a3c8-6ec0c7b0af33
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 2ceb2f45-c0d7-4375-8664-22290b8ccc4a
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: left
+      m_Id: ea674d76-d49c-4e1a-9c2e-abcc30e693d3
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 9178f92a-9eb7-423a-ac73-a9ffe9966636
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: forward
+      m_Id: 74c9dc68-9c20-40f4-887e-7fccf74be9f4
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    - m_Name: backward
+      m_Id: 068171e6-fa29-4ad7-bbc1-c973212fa491
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controls
+      m_Flags: 8
+    m_Flags: 0
 --- !u!1001 &108553052177948486
 PrefabInstance:
   m_ObjectHideFlags: 0

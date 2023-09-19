@@ -18,7 +18,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         // base.OnJoinedLobby();
-        SceneManager.LoadScene("Loobby");
+        SceneManager.LoadScene("Lobby");
     }
     // Update is called once per frame
     void Update()
