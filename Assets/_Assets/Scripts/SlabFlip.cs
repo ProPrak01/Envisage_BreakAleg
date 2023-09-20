@@ -23,12 +23,16 @@ public class SlabFlip : MonoBehaviour
     public float p1p2 = 0;
     public float transferCooldown = 1.0f; // Cooldown time between transfers.
     private float lastTransferTime = 0f; // Time of the last transfer.
+    private Quaternion targetRotation;
+    private Quaternion initialRotation;
 
-   // public GameObject wantedplate;
+    // public GameObject wantedplate;
     private void Start()
     {
         blockRenderer = GetComponent<Renderer>();
         originalMaterial = blockRenderer.material;
+        targetRotation = Quaternion.Euler(0f, 0f, 90f);
+        initialRotation = Quaternion.Euler(0f, 0f, 0f);
 
     }
 
@@ -56,7 +60,7 @@ public class SlabFlip : MonoBehaviour
                 attachKey = KeyCode.O;
             }
             // Check if the player presses the attach key.
-            if (Input.GetKeyDown(attachKey) && player.transform.childCount == 2 /**&& Time.time - lastTransferTime >= transferCooldown**/)
+            if (Input.GetKeyDown(attachKey) && player.transform.childCount == 1 /**&& Time.time - lastTransferTime >= transferCooldown**/)
             {
                 // Find the player with the "Player" tag.
 
@@ -78,11 +82,12 @@ public class SlabFlip : MonoBehaviour
                 
 
             }
-
+            /**
             else if(Input.GetKeyDown(attachKey) && player.transform.childCount == 1)
             {
                 //temp();
             }
+            **/
         }
         else
         {
@@ -188,6 +193,7 @@ public class SlabFlip : MonoBehaviour
 
     public void Flip()
     {
-       // flipObject1 = Instantiated ();
+        flipObject1 = Instantiate(flipObject, transform.position, initialRotation);
+        transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, 10*Time.deltaTime);
     }
 }
