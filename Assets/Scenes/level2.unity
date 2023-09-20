@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17670164, g: 0.22118022, b: 0.30348152, a: 1}
+  m_IndirectSpecularColor: {r: 0.1767016, g: 0.22117996, b: 0.30348143, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2085,6 +2085,7 @@ GameObject:
   - component: {fileID: 2111261034}
   - component: {fileID: 2111261040}
   - component: {fileID: 2111261041}
+  - component: {fileID: 2111261042}
   m_Layer: 0
   m_Name: TestSlab
   m_TagString: Floor
@@ -2191,7 +2192,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d67fbff3a1abf2642aa8939bd82fdf9a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2206,7 +2207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111261033}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00501cf2bc16dc24b993e82042cc249d, type: 3}
   m_Name: 
@@ -2223,6 +2224,23 @@ MonoBehaviour:
   attachKey: 101
   p1p2: 0
   transferCooldown: 1
+--- !u!114 &2111261042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111261033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab23ca1c3bd42fe418ad8cd39babf3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  interactionDistance: 2
+  glowMaterial: {fileID: 0}
+  animator: {fileID: 0}
+  animationParameter: IsActivated
 --- !u!1 &50801161435761354
 GameObject:
   m_ObjectHideFlags: 0
