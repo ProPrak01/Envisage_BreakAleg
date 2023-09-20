@@ -1,6 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
+//using static UnityEditor;
 using UnityEngine.UIElements;
 
 public class Attacher : MonoBehaviourPunCallbacks
@@ -22,7 +22,6 @@ public class Attacher : MonoBehaviourPunCallbacks
     
     private void Start()
     {
-       
         blockRenderer = GetComponentInChildren<Renderer>();
         originalMaterial = blockRenderer.material;
     }

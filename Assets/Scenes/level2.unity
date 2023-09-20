@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1767016, g: 0.22117996, b: 0.30348143, a: 1}
+  m_IndirectSpecularColor: {r: 0.17670164, g: 0.22118022, b: 0.30348152, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2083,7 +2083,6 @@ GameObject:
   - component: {fileID: 2111261037}
   - component: {fileID: 2111261036}
   - component: {fileID: 2111261034}
-  - component: {fileID: 2111261039}
   - component: {fileID: 2111261040}
   - component: {fileID: 2111261041}
   m_Layer: 0
@@ -2179,23 +2178,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2111261039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111261033}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71aec814e6b1f794094487aeb5b3888d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionCompleted: 0
-  interactKey: 101
-  animator: {fileID: 0}
-  glowMaterial: {fileID: 0}
-  originalMaterial: {fileID: 0}
 --- !u!95 &2111261040
 Animator:
   serializedVersion: 5
