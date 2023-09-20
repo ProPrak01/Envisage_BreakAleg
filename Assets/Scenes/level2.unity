@@ -2082,9 +2082,10 @@ GameObject:
   - component: {fileID: 2111261038}
   - component: {fileID: 2111261037}
   - component: {fileID: 2111261036}
-  - component: {fileID: 2111261035}
   - component: {fileID: 2111261034}
   - component: {fileID: 2111261039}
+  - component: {fileID: 2111261040}
+  - component: {fileID: 2111261041}
   m_Layer: 0
   m_Name: TestSlab
   m_TagString: Floor
@@ -2113,29 +2114,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.89865017, y: 0.09326942, z: 0.8730262}
   m_Center: {x: 0, y: 0.008776661, z: 0.000000029802322}
---- !u!114 &2111261035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111261033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idofemptyblock: 5
-  numberneeded: 4
-  playerTag: Player
-  player2Tag: Player2
-  interactionDistance: 2
-  glowMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
-  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
-  originalMaterial: {fileID: 0}
-  attachKey: 101
-  p1p2: 0
-  transferCooldown: 1
 --- !u!23 &2111261036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2195,13 +2173,30 @@ Transform:
   m_GameObject: {fileID: 2111261033}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000037748947, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.83, y: 6.5, z: 3.75}
+  m_LocalPosition: {x: -3.83, y: 4.91, z: 3.75}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2111261039
+--- !u!114 &2111261039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111261033}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71aec814e6b1f794094487aeb5b3888d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionCompleted: 0
+  interactKey: 101
+  animator: {fileID: 0}
+  glowMaterial: {fileID: 0}
+  originalMaterial: {fileID: 0}
+--- !u!95 &2111261040
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -2211,7 +2206,7 @@ Animator:
   m_GameObject: {fileID: 2111261033}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c31e96fb7e25a084da22d21957fe4162, type: 2}
+  m_Controller: {fileID: 9100000, guid: d67fbff3a1abf2642aa8939bd82fdf9a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2222,6 +2217,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2111261041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111261033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71aec814e6b1f794094487aeb5b3888d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionCompleted: 0
+  interactKey: 101
+  animator: {fileID: 0}
+  glowMaterial: {fileID: 0}
+  originalMaterial: {fileID: 0}
 --- !u!1 &50801161435761354
 GameObject:
   m_ObjectHideFlags: 0
