@@ -1009,6 +1009,11 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3337767499724843409, guid: b317ef07831cb4fb9ae0c8536e013adf,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3500978242193547092, guid: b317ef07831cb4fb9ae0c8536e013adf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1069,10 +1074,25 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6049742038529247759, guid: b317ef07831cb4fb9ae0c8536e013adf,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730822323290311440, guid: b317ef07831cb4fb9ae0c8536e013adf,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6805250777365426563, guid: b317ef07831cb4fb9ae0c8536e013adf,
         type: 3}
       propertyPath: m_Name
       value: emptyslabs
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747702516133205494, guid: b317ef07831cb4fb9ae0c8536e013adf,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1156,11 +1176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerprefab: {fileID: 2827139803560680852, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   playerTag: Player
   player2Tag: Player2
   p1p2: 0
-  objectPrefab: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
-    type: 3}
   interactionDistance: 2
   attachKey: 101
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
@@ -1414,11 +1434,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerprefab: {fileID: 0}
   playerTag: Player
   player2Tag: Player2
   p1p2: 0
-  objectPrefab: {fileID: 1263506596452181544, guid: b685f1163c16645749295239ffb5a229,
-    type: 3}
   interactionDistance: 2
   attachKey: 101
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
@@ -1946,11 +1965,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerprefab: {fileID: 0}
   playerTag: Player
   player2Tag: Player2
   p1p2: 0
-  objectPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
-    type: 3}
   interactionDistance: 2
   attachKey: 101
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
@@ -2106,11 +2124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca694b038521e4f3688181e626b81996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerprefab: {fileID: 0}
   playerTag: Player
   player2Tag: Player2
   p1p2: 0
-  objectPrefab: {fileID: 1689830557818598448, guid: 24243ddb5f78a46e78289017d13a30d1,
-    type: 3}
   interactionDistance: 2
   attachKey: 101
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}

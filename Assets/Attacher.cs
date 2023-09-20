@@ -3,13 +3,15 @@ using UnityEngine;
 using static UnityEditor.FilePathAttribute;
 using UnityEngine.UIElements;
 
-public class Attacher : MonoBehaviour
+public class Attacher : MonoBehaviourPunCallbacks
 {
+    public GameObject playerprefab;
+
     //PhotonView view;
     public string playerTag = "Player"; // Tag of the player GameObject.
     public string player2Tag = "Player2"; // Tag of the player GameObject.
     public float p1p2;
-    public GameObject objectPrefab; // The prefab to instantiate and make a child of the player.
+    //public GameObject objectPrefab; // The prefab to instantiate and make a child of the player.
     public float interactionDistance = 2.0f; // Distance to trigger interaction with the block.
     public KeyCode attachKey = KeyCode.E; // The key to press to attach/detach the object.
     public Material glowMaterial; // Material to apply when the player is near the block.
@@ -49,7 +51,7 @@ public class Attacher : MonoBehaviour
 
             }
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(attachKey)  /**&& instantiatedObject == null**/)
+            if (Input.GetKeyDown(KeyCode.E) && photonView.IsMine/**&& instantiatedObject == null**/)
             {
               
                 // Find the player with the "Player" tag.
@@ -63,13 +65,17 @@ public class Attacher : MonoBehaviour
                     // Check if the player is within the interaction distance.
                     if (distance <= interactionDistance)
                     {
-                        // Instantiate the objectPrefab and make it a child of the player.
-                       // instantiatedObject =  PhotonNetwork.Instantiate("objectPrefab", player.transform.position, Quaternion.identity);
-                        instantiatedObject = Instantiate(objectPrefab, player.transform);
+                      //  PhotonNetwork.Instantiate(playerprefab.name, player.transform.position, Quaternion.identity);
 
+                        /**
+                        // Instantiate the objectPrefab and make it a child of the player.
+                       instantiatedObject = PhotonNetwork.Instantiate("one", player.transform.position, Quaternion.identity);
+                        // instantiatedObject = Instantiate(objectPrefab, player.transform);
+
+                        instantiatedObject.transform.parent = player.transform;
                         instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
                         instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
-
+                        **/
                     }
                 }
             }

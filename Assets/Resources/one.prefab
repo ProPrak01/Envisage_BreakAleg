@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2f8234b2a01b4a789e94458f6dcf39c,
         type: 3}
       propertyPath: m_Name
-      value: 1_
+      value: one
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b2f8234b2a01b4a789e94458f6dcf39c,
         type: 3}
@@ -85,7 +85,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b2f8234b2a01b4a789e94458f6dcf39c,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4477219204241317546}
+      addedObject: {fileID: 4546653264984193031}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b2f8234b2a01b4a789e94458f6dcf39c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3736474689081913590}
   m_SourcePrefab: {fileID: 100100000, guid: b2f8234b2a01b4a789e94458f6dcf39c, type: 3}
 --- !u!1 &5431608450906829351 stripped
 GameObject:
@@ -93,20 +97,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5161576841781350262}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4477219204241317546
+--- !u!114 &4546653264984193031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5431608450906829351}
-  m_Enabled: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 3736474689081913590}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &3736474689081913590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431608450906829351}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PositionModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 3
     InterpolateOption: 2
