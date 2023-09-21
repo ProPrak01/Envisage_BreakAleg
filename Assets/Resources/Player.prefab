@@ -115,6 +115,7 @@ MonoBehaviour:
       m_Action: Player Controls
       m_Flags: 8
     m_Flags: 0
+  joystickCanvas: {fileID: 0}
 --- !u!136 &6664638697610507671
 CapsuleCollider:
   m_ObjectHideFlags: 0
