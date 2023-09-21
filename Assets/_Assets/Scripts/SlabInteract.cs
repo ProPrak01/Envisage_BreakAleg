@@ -29,6 +29,7 @@ public class SlabInteract : MonoBehaviour
             {
                 animator.SetBool(animationParameter, true);
             }
+
         }
         else
         {
