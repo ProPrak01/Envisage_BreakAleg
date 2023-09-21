@@ -49,6 +49,8 @@ public class SlabInteract : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = false;
+          //  animator.SetBool(animationParameter, false);
+
         }
     }
 }
