@@ -33,6 +33,8 @@ public class SlabInteract : MonoBehaviour
         else
         {
             slabRenderer.material = originalMaterial;
+            animator.SetBool(animationParameter, false);
+
         }
     }
 
@@ -49,7 +51,7 @@ public class SlabInteract : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = false;
-          //  animator.SetBool(animationParameter, false);
+        //   animator.SetBool(animationParameter, false);
 
         }
     }
