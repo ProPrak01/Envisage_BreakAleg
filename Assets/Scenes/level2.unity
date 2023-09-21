@@ -244,9 +244,9 @@ GameObject:
   - component: {fileID: 11663298}
   - component: {fileID: 11663297}
   m_Layer: 0
-  m_Name: Cube (11)
+  m_Name: 15
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -303,6 +303,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 15
 --- !u!65 &11663299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -591,9 +592,9 @@ GameObject:
   - component: {fileID: 167655141}
   - component: {fileID: 167655140}
   m_Layer: 0
-  m_Name: Cube (16)
+  m_Name: 42
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -650,6 +651,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 42
 --- !u!65 &167655142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -736,9 +738,9 @@ GameObject:
   - component: {fileID: 172254234}
   - component: {fileID: 172254233}
   m_Layer: 0
-  m_Name: Cube (14)
+  m_Name: 12
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -795,6 +797,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 12
 --- !u!65 &172254235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -999,9 +1002,9 @@ GameObject:
   - component: {fileID: 361395443}
   - component: {fileID: 361395442}
   m_Layer: 0
-  m_Name: Cube (22)
+  m_Name: 11
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1058,6 +1061,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 11
 --- !u!65 &361395444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1144,9 +1148,9 @@ GameObject:
   - component: {fileID: 384716543}
   - component: {fileID: 384716542}
   m_Layer: 0
-  m_Name: Cube (18)
+  m_Name: 16
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1203,6 +1207,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 16
 --- !u!65 &384716544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1289,9 +1294,9 @@ GameObject:
   - component: {fileID: 418616376}
   - component: {fileID: 418616375}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: 14
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1348,6 +1353,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 14
 --- !u!65 &418616377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1563,9 +1569,9 @@ GameObject:
   - component: {fileID: 468422409}
   - component: {fileID: 468422408}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: 33
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1622,6 +1628,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 33
 --- !u!65 &468422410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1814,9 +1821,9 @@ GameObject:
   - component: {fileID: 653816224}
   - component: {fileID: 653816223}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: 45
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1873,6 +1880,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 45
 --- !u!65 &653816225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2341,9 +2349,9 @@ GameObject:
   - component: {fileID: 800902021}
   - component: {fileID: 800902020}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: 25
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2400,6 +2408,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 25
 --- !u!65 &800902022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2486,9 +2495,9 @@ GameObject:
   - component: {fileID: 821793205}
   - component: {fileID: 821793204}
   m_Layer: 0
-  m_Name: Cube (23)
+  m_Name: 31
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2545,6 +2554,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 31
 --- !u!65 &821793206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2737,9 +2747,9 @@ GameObject:
   - component: {fileID: 937252891}
   - component: {fileID: 937252890}
   m_Layer: 0
-  m_Name: Cube (20)
+  m_Name: 46
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2796,6 +2806,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 46
 --- !u!65 &937252892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3011,9 +3022,9 @@ GameObject:
   - component: {fileID: 956192515}
   - component: {fileID: 956192514}
   m_Layer: 0
-  m_Name: Cube (17)
+  m_Name: 26
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3070,6 +3081,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 26
 --- !u!65 &956192516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3293,9 +3305,9 @@ GameObject:
   - component: {fileID: 1067708870}
   - component: {fileID: 1067708869}
   m_Layer: 0
-  m_Name: Cube (13)
+  m_Name: 22
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3352,6 +3364,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 22
 --- !u!65 &1067708871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3487,9 +3500,9 @@ GameObject:
   - component: {fileID: 1221257324}
   - component: {fileID: 1221257323}
   m_Layer: 0
-  m_Name: Cube (15)
+  m_Name: 32
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3546,6 +3559,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 32
 --- !u!65 &1221257325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3687,9 +3701,9 @@ GameObject:
   - component: {fileID: 1418296072}
   - component: {fileID: 1418296071}
   m_Layer: 0
-  m_Name: Cube (19)
+  m_Name: 36
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3746,6 +3760,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 36
 --- !u!65 &1418296073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3832,9 +3847,9 @@ GameObject:
   - component: {fileID: 1590851963}
   - component: {fileID: 1590851962}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: 34
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3891,6 +3906,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 34
 --- !u!65 &1590851964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4083,9 +4099,9 @@ GameObject:
   - component: {fileID: 1659399863}
   - component: {fileID: 1659399862}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: 24
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4142,6 +4158,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 24
 --- !u!65 &1659399864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4228,9 +4245,9 @@ GameObject:
   - component: {fileID: 1663100611}
   - component: {fileID: 1663100610}
   m_Layer: 0
-  m_Name: Cube (24)
+  m_Name: 41
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4287,6 +4304,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 41
 --- !u!65 &1663100612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4373,9 +4391,9 @@ GameObject:
   - component: {fileID: 1717441263}
   - component: {fileID: 1717441262}
   m_Layer: 0
-  m_Name: Cube (12)
+  m_Name: 13
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4432,6 +4450,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 13
 --- !u!65 &1717441264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4518,9 +4537,9 @@ GameObject:
   - component: {fileID: 1820828179}
   - component: {fileID: 1820828178}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: 35
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4577,6 +4596,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 35
 --- !u!65 &1820828180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4663,9 +4683,9 @@ GameObject:
   - component: {fileID: 1823815992}
   - component: {fileID: 1823815991}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: 44
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4722,6 +4742,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 44
 --- !u!65 &1823815993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4914,9 +4935,9 @@ GameObject:
   - component: {fileID: 2032761292}
   - component: {fileID: 2032761291}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: 43
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4973,6 +4994,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 43
 --- !u!65 &2032761293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5188,9 +5210,9 @@ GameObject:
   - component: {fileID: 2034776049}
   - component: {fileID: 2034776048}
   m_Layer: 0
-  m_Name: Cube (21)
+  m_Name: 21
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5247,6 +5269,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 21
 --- !u!65 &2034776050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5589,6 +5612,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 0}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 0
 --- !u!23 &2111261043
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5646,9 +5670,9 @@ GameObject:
   - component: {fileID: 2121953666}
   - component: {fileID: 2121953665}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: 23
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5705,6 +5729,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
   animationParameter: IsActivated
+  card_id: 23
 --- !u!65 &2121953667
 BoxCollider:
   m_ObjectHideFlags: 0
