@@ -7,7 +7,7 @@ public class SlabInteract : MonoBehaviour
     public Material glowMaterial; // Material to apply when the player is near the block.
     public float rotationSpeed = 45.0f; // Rotation speed in degrees per second.
     public string animationParameter = "IsActivated"; // Name of the animation parameter.
-    public float card_id;
+    public int card_id;
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer slabRenderer; // Reference to the slab's renderer.
     private Material originalMaterial; // Store the original material.
@@ -15,9 +15,11 @@ public class SlabInteract : MonoBehaviour
     private Quaternion startRotation; // Starting rotation of the block.
     private Quaternion targetRotation; // Target rotation (180 degrees).
     private Quaternion originalRotation; // Original rotation of the block.
-
+    public int i, j;
     void Start()
     {
+        i = card_id / 10;
+        j = card_id % 10;
         slabRenderer = GetComponent<Renderer>();
         originalMaterial = slabRenderer.material;
         originalRotation = transform.rotation; // Store the original rotation.
@@ -35,6 +37,8 @@ public class SlabInteract : MonoBehaviour
             {
                 // Start the rotation when the player presses "E".
                 StartCoroutine(RotateBlock(targetRotation));
+                FindObjectOfType<mastermindlvl2>().dooropenarray[i][j] = true;
+
             }
         }
         else
@@ -48,6 +52,8 @@ public class SlabInteract : MonoBehaviour
                 StartCoroutine(RotateBlock(originalRotation));
             }
             **/
+            FindObjectOfType<mastermindlvl2>().dooropenarray[i][j] = true;
+
         }
     }
 
