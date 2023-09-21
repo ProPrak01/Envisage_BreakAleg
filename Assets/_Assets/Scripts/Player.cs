@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Photon.Pun;
+//using Photon.Pun;
 
 
 public class Player : MonoBehaviour
 {
-    PhotonView view;
+  //  PhotonView view;
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
     public InputAction playerControls;
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        view = GetComponent<PhotonView>();
+      //  view = GetComponent<PhotonView>();
     }
     private void OnEnable()
     {
@@ -28,8 +28,7 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        if (view.IsMine)
-        {
+        
             Vector3 moveDir = playerControls.ReadValue<Vector3>();
 
             transform.position += moveDir * moveSpeed * Time.deltaTime;
@@ -40,7 +39,7 @@ public class Player : MonoBehaviour
             transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
 
             animator.SetBool("IsWalking", isWalking);
-        }
+        
         /**
         Vector2 inputVector = new Vector2(0, 0);
 

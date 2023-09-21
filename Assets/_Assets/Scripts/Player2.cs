@@ -61,6 +61,6 @@ public class Player2 : MonoBehaviour
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
 
-        animator.SetBool("IsWalking", isWalking);
+        animator.SetBool("IsWalking1", isWalking);
     }
 }

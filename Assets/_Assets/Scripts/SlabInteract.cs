@@ -7,12 +7,9 @@ public class SlabInteract : MonoBehaviour
     public Material glowMaterial; // Material to apply when the player is near the block.
     public float rotationSpeed = 45.0f; // Rotation speed in degrees per second.
     public string animationParameter = "IsActivated"; // Name of the animation parameter.
-<<<<<<< Updated upstream
     public int card_id;
-=======
-    public float card_id;
+
     public int value_id;
->>>>>>> Stashed changes
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer slabRenderer; // Reference to the slab's renderer.
     private Material originalMaterial; // Store the original material.

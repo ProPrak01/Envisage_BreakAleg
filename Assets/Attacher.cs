@@ -1,12 +1,12 @@
-using Photon.Pun;
+//using Photon.Pun;
 using UnityEngine;
 //using static UnityEditor;
 using UnityEngine.UIElements;
 
-public class Attacher : MonoBehaviourPunCallbacks
+public class Attacher : MonoBehaviour
 {
     //public GameObject playerprefab;
-    public string number;
+   // public string number;
     //PhotonView view;
     public string playerTag = "Player"; // Tag of the player GameObject.
     public string player2Tag = "Player2"; // Tag of the player GameObject.
@@ -17,6 +17,8 @@ public class Attacher : MonoBehaviourPunCallbacks
     public Material glowMaterial; // Material to apply when the player is near the block.
     public Material originalMaterial;
     private GameObject instantiatedObject; // Reference to the instantiated object.
+    public GameObject objectPrefab; // Reference to the instantiated object.
+
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer blockRenderer; // Reference to the block's renderer.
     
@@ -50,7 +52,7 @@ public class Attacher : MonoBehaviourPunCallbacks
 
             }
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(KeyCode.E) && photonView.IsMine/**&& instantiatedObject == null**/)
+            if (Input.GetKeyDown(KeyCode.E) /**&& instantiatedObject == null**/)
             {
               
                 // Find the player with the "Player" tag.
@@ -68,8 +70,8 @@ public class Attacher : MonoBehaviourPunCallbacks
 
                         
                         // Instantiate the objectPrefab and make it a child of the player.
-                       instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
-                        // instantiatedObject = Instantiate(objectPrefab, player.transform);
+                       //instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
+                        instantiatedObject = Instantiate(objectPrefab, player.transform);
 
                         instantiatedObject.transform.parent = player.transform;
                         instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
