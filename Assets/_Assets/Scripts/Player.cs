@@ -12,31 +12,38 @@ public class Player : NetworkBehaviour
   //  PhotonView view;
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
+    //private Joy input=null;
     private NetworkVariable<int> netvariable_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public InputAction playerControls;
+
     void Start()
     {
+      //  input = new Joy();
         animator = GetComponentInChildren<Animator>();
       //  view = GetComponent<PhotonView>();
     }
+   
     private void OnEnable()
     {
+      //  input.Enable();
+
         playerControls.Enable();
     }
     private void OnDisable()
     {
         playerControls.Disable();
+       // input.Disable();
     }
     private bool isWalking;
     
     private void Update()
     {
         if (!IsOwner) return;
-            Vector3 moveDir = playerControls.ReadValue<Vector3>();
+        Vector2 moveDir = playerControls.ReadValue<Vector2>();
+        Vector3 movedir2 = new Vector3(moveDir.x, 0, moveDir.y);
+            transform.position += movedir2 * moveSpeed * Time.deltaTime;
 
-            transform.position += moveDir * moveSpeed * Time.deltaTime;
-
-            isWalking = moveDir != Vector3.zero;
+            isWalking = movedir2 != Vector3.zero;
 
             float rotateSpeed = 10f;
             transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
