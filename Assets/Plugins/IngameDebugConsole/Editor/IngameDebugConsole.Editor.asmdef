@@ -1,0 +1,20 @@
+{
+    "name": "IngameDebugConsole.Editor",
+    "rootNamespace": "",
+    "references": [
+        "IngameDebugConsole.Runtime"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "macOSStandalone"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

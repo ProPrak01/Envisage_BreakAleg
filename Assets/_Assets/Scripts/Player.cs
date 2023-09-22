@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
+
 using UnityEngine.InputSystem;
 //using Photon.Pun;
 
 
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
   //  PhotonView view;
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
+    private NetworkVariable<int> netvarint_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public InputAction playerControls;
     void Start()
     {
@@ -28,7 +31,7 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        
+        if (!IsOwner) return;
             Vector3 moveDir = playerControls.ReadValue<Vector3>();
 
             transform.position += moveDir * moveSpeed * Time.deltaTime;
