@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class dooropen : MonoBehaviour
+public class dooropen : NetworkBehaviour
 {
+    
     public List<bool> checkall = new List<bool>();
    // public bool[] checkall = new bool[20];
     public bool i ;
@@ -70,4 +72,5 @@ public class dooropen : MonoBehaviour
         transform.position = targetPosition;
         isMoving = false;
     }
+
 }

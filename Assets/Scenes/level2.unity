@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1767016, g: 0.22117996, b: 0.30348143, a: 1}
+  m_IndirectSpecularColor: {r: 0.17670164, g: 0.22118022, b: 0.30348152, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,6 +305,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 15
   value_id: 4
+  i: 0
+  j: 0
 --- !u!65 &11663299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -655,6 +657,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 42
   value_id: 5
+  i: 0
+  j: 0
 --- !u!65 &167655142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -802,6 +806,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 12
   value_id: 3
+  i: 0
+  j: 0
 --- !u!65 &172254235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1151,6 +1157,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 11
   value_id: 10
+  i: 0
+  j: 0
 --- !u!65 &361395444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1298,6 +1306,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 16
   value_id: 8
+  i: 0
+  j: 0
 --- !u!65 &384716544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1445,6 +1455,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 14
   value_id: 12
+  i: 0
+  j: 0
 --- !u!65 &418616377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1721,6 +1733,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 33
   value_id: 10
+  i: 0
+  j: 0
 --- !u!65 &468422410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1974,6 +1988,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 45
   value_id: 7
+  i: 0
+  j: 0
 --- !u!65 &653816225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2503,6 +2519,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 25
   value_id: 3
+  i: 0
+  j: 0
 --- !u!65 &800902022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2650,6 +2668,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 31
   value_id: 2
+  i: 0
+  j: 0
 --- !u!65 &821793206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2987,6 +3007,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 46
   value_id: 12
+  i: 0
+  j: 0
 --- !u!65 &937252892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3263,6 +3285,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 26
   value_id: 9
+  i: 0
+  j: 0
 --- !u!65 &956192516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3547,6 +3571,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 22
   value_id: 8
+  i: 0
+  j: 0
 --- !u!65 &1067708871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3743,6 +3769,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 32
   value_id: 11
+  i: 0
+  j: 0
 --- !u!65 &1221257325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3882,6 +3910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f65b112dfee49e4a54a935fb432f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  removeobject1: {fileID: 0}
+  removeobject2: {fileID: 0}
 --- !u!1 &1230516095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4073,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 36
   value_id: 6
+  i: 0
+  j: 0
 --- !u!65 &1418296073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4190,6 +4222,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 34
   value_id: 4
+  i: 0
+  j: 0
 --- !u!65 &1590851964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4396,14 +4430,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659399860}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7599305, y: 32.28509, z: -18.532}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9994349, w: 0.03361485}
+  m_LocalPosition: {x: 1.7599306, y: 32.28509, z: -18.532}
   m_LocalScale: {x: 1.7, y: 0.1, z: 1.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1230516096}
   m_Father: {fileID: 1226859185}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -176.147}
 --- !u!95 &1659399862
 Animator:
   serializedVersion: 5
@@ -4444,6 +4478,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 24
   value_id: 2
+  i: 0
+  j: 0
 --- !u!65 &1659399864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4591,6 +4627,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 41
   value_id: 6
+  i: 0
+  j: 0
 --- !u!65 &1663100612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4738,6 +4776,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 13
   value_id: 1
+  i: 0
+  j: 0
 --- !u!65 &1717441264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4886,6 +4926,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 35
   value_id: 5
+  i: 0
+  j: 0
 --- !u!65 &1820828180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5033,6 +5075,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 44
   value_id: 7
+  i: 0
+  j: 0
 --- !u!65 &1823815993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5286,6 +5330,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 43
   value_id: 1
+  i: 0
+  j: 0
 --- !u!65 &2032761293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5562,6 +5608,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 21
   value_id: 11
+  i: 0
+  j: 0
 --- !u!65 &2034776050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5906,6 +5954,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 0
   value_id: 0
+  i: 0
+  j: 0
 --- !u!23 &2111261043
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6024,6 +6074,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 23
   value_id: 9
+  i: 0
+  j: 0
 --- !u!65 &2121953667
 BoxCollider:
   m_ObjectHideFlags: 0
