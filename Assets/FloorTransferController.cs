@@ -1,6 +1,8 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class TransferBlockController : MonoBehaviour
+
+public class TransferBlockController : NetworkBehaviour
 {
     public int idofemptyblock;
     public int numberneeded;
@@ -68,7 +70,7 @@ public class TransferBlockController : MonoBehaviour
                     if (distance <= interactionDistance)
                     {
                         // Transfer the child object from the player to the block.
-                        TransferChildObject(player, transform);
+                        TransferChildObjectServerRpc();
                     }
                 }
 
@@ -78,7 +80,7 @@ public class TransferBlockController : MonoBehaviour
 
             else if(Input.GetKeyDown(attachKey) && player.transform.childCount == 1)
             {
-                temp();
+                tempServerRpc();
             }
         }
         else
@@ -87,41 +89,8 @@ public class TransferBlockController : MonoBehaviour
             blockRenderer.material = originalMaterial;
         }
     }
-    void temp()
-    {
-        GameObject player= null;
-        if (p1p2 == 1)
-        {
-             player = GameObject.FindGameObjectWithTag(playerTag);
-
-        }
-        else if (p1p2 == 2)
-        {
-            player = GameObject.FindGameObjectWithTag(player2Tag);
-
-        }
-
-        if (transform.childCount > 0 && player.transform.childCount < 2)
-        {
-            // Detach the child object from the block.
-            Transform child = transform.GetChild(0);
-
-            // Make it a child of the player again.
-            child.SetParent(player.transform);
-
-            // Reset the position relative to the player.
-            child.localPosition = new Vector3(0f, 3.2f, 0f);
-
-            // Scale the child object by a factor of 1 (normal size).
-            child.localScale = Vector3.one;
-
-            // Rotate the child object back to its original orientation.
-            child.localRotation = Quaternion.identity;
-            lastTransferTime = Time.time;
-        }
-
-
-    }
+    
+ 
     private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object has the "Player" tag.
@@ -151,17 +120,28 @@ public class TransferBlockController : MonoBehaviour
             p1p2 = 0;
         }
     }
-
-    private void TransferChildObject(GameObject fromObject, Transform toObject)
+    [ServerRpc]
+    private void TransferChildObjectServerRpc()
     {
+        GameObject player = null;
+        if (p1p2 == 1)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag);
+
+        }
+        else if (p1p2 == 2)
+        {
+            player = GameObject.FindGameObjectWithTag(player2Tag);
+
+        }
         // Check if the player already has a child object.
-        if (fromObject.transform.childCount == 2)
+        if (player.transform.childCount == 2)
         {
             // Get the child object.
-            Transform child = fromObject.transform.GetChild(1);
+            Transform child = player.transform.GetChild(1);
 
             // Make it a child of the block.
-            child.SetParent(toObject);
+            child.SetParent(transform);
 
             // Reset the position relative to the block.
             child.localPosition = Vector3.zero;
@@ -181,5 +161,42 @@ public class TransferBlockController : MonoBehaviour
             }
 
         }
+    }
+    [ServerRpc]
+
+    void tempServerRpc()
+    {
+        GameObject player = null;
+        if (p1p2 == 1)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag);
+
+        }
+        else if (p1p2 == 2)
+        {
+            player = GameObject.FindGameObjectWithTag(player2Tag);
+
+        }
+
+        if (transform.childCount > 0 && player.transform.childCount < 2)
+        {
+            // Detach the child object from the block.
+            Transform child = transform.GetChild(0);
+
+            // Make it a child of the player again.
+            child.SetParent(player.transform);
+
+            // Reset the position relative to the player.
+            child.localPosition = new Vector3(0f, 3.2f, 0f);
+
+            // Scale the child object by a factor of 1 (normal size).
+            child.localScale = Vector3.one;
+
+            // Rotate the child object back to its original orientation.
+            child.localRotation = Quaternion.identity;
+            lastTransferTime = Time.time;
+        }
+
+
     }
 }

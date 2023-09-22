@@ -4,10 +4,10 @@ using Unity.Netcode;
 //using static UnityEditor;
 using UnityEngine.UIElements;
 
-public class Attacher :NetworkBehaviour
+public class Attacher : NetworkBehaviour
 {
     //public GameObject playerprefab;
-   // public string number;
+    // public string number;
     //PhotonView view;
     public string playerTag = "Player"; // Tag of the player GameObject.
     public string player2Tag = "Player2"; // Tag of the player GameObject.
@@ -22,7 +22,7 @@ public class Attacher :NetworkBehaviour
 
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer blockRenderer; // Reference to the block's renderer.
-    
+
     private void Start()
     {
         blockRenderer = GetComponentInChildren<Renderer>();
@@ -42,7 +42,7 @@ public class Attacher :NetworkBehaviour
             {
                 player = GameObject.FindGameObjectWithTag(playerTag);
                 attachKey = KeyCode.E;
-               // attachKey = KeyCode.O;    // shuffledcontrolled
+                // attachKey = KeyCode.O;    // shuffledcontrolled
 
             }
             else if (p1p2 == 2)
@@ -56,7 +56,7 @@ public class Attacher :NetworkBehaviour
             // Check if the player presses the attach key and no object is attached to the player.
             if (Input.GetKeyDown(KeyCode.E) /**&& instantiatedObject == null**/)
             {
-              
+
                 // Find the player with the "Player" tag.
 
                 // Check if a player object is found.
@@ -73,14 +73,13 @@ public class Attacher :NetworkBehaviour
 
                         // Instantiate the objectPrefab and make it a child of the player.
                         //instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
-                        SpawnObjectOnClientsServerRPC(player.GetComponent<NetworkObject>());
-                        /**
-                        instantiatedObject = Instantiate(objectPrefab, player.transform);
-                        instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
-                      //  instantiatedObject.transform.parent = player.transform;
-                        instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
-                        instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
+                        /**  instantiatedObject = Instantiate(objectPrefab, player.transform);
+                          instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
+                          //  instantiatedObject.transform.parent = player.transform;
+                          instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
+                          instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
                         **/
+                        InstatiateServerRpc();
                     }
                 }
             }
@@ -91,21 +90,7 @@ public class Attacher :NetworkBehaviour
             blockRenderer.material = originalMaterial;
         }
     }
-    [ServerRpc(RequireOwnership = false)]
-    private void SpawnObjectOnClientsServerRPC(NetworkObject playerObject)
-    {
-        // Check if the player object is valid and has network ownership.
-        if (playerObject != null && playerObject.IsOwner)
-        {
-            // Instantiate the objectPrefab and make it a child of the player.
-            instantiatedObject = Instantiate(objectPrefab, playerObject.transform);
-            // Set local position and scale as needed.
-            instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f);
-            instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f);
-            // NetworkObject component needs to be spawned manually.
-            instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
-        }
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object has the "Player" tag.
@@ -144,5 +129,37 @@ public class Attacher :NetworkBehaviour
 
         }
     }
-    
+    [ServerRpc]
+    private void InstatiateServerRpc()
+    {
+        GameObject player = null;
+        if (p1p2 == 1)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag);
+            attachKey = KeyCode.E;
+            // attachKey = KeyCode.O;    // shuffledcontrolled
+
+        }
+        else if (p1p2 == 2)
+        {
+            player = GameObject.FindGameObjectWithTag(player2Tag);
+            attachKey = KeyCode.O;
+            // attachKey = KeyCode.E;    // shuffledcontrolled
+
+
+        }
+        //  PhotonNetwork.Instantiate(playerprefab.name, player.transform.position, Quaternion.identity);
+
+
+        // Instantiate the objectPrefab and make it a child of the player.
+        //instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
+        
+        instantiatedObject = Instantiate(objectPrefab, player.transform);
+        instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
+         instantiatedObject.transform.parent = player.transform;
+        instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
+        instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
+        
+
+    }
 }
