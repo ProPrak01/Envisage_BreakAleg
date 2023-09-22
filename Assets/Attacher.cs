@@ -1,9 +1,10 @@
 //using Photon.Pun;
 using UnityEngine;
+using Unity.Netcode;
 //using static UnityEditor;
 using UnityEngine.UIElements;
 
-public class Attacher : MonoBehaviour
+public class Attacher :NetworkBehaviour
 {
     //public GameObject playerprefab;
    // public string number;
@@ -33,6 +34,7 @@ public class Attacher : MonoBehaviour
         // Check if the player is near the block.
         if (isPlayerNear)
         {
+            if (!IsOwner) return;
             // Apply the glow material when the player is near.
             blockRenderer.material = glowMaterial;
             GameObject player = null;
@@ -66,17 +68,19 @@ public class Attacher : MonoBehaviour
                     // Check if the player is within the interaction distance.
                     if (distance <= interactionDistance)
                     {
-                      //  PhotonNetwork.Instantiate(playerprefab.name, player.transform.position, Quaternion.identity);
+                        //  PhotonNetwork.Instantiate(playerprefab.name, player.transform.position, Quaternion.identity);
 
-                        
+
                         // Instantiate the objectPrefab and make it a child of the player.
-                       //instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
+                        //instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
+                        SpawnObjectOnClientsServerRPC(player.GetComponent<NetworkObject>());
+                        /**
                         instantiatedObject = Instantiate(objectPrefab, player.transform);
-
-                        instantiatedObject.transform.parent = player.transform;
+                        instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
+                      //  instantiatedObject.transform.parent = player.transform;
                         instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
                         instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
-                        
+                        **/
                     }
                 }
             }
@@ -87,7 +91,21 @@ public class Attacher : MonoBehaviour
             blockRenderer.material = originalMaterial;
         }
     }
-
+    [ServerRpc(RequireOwnership = false)]
+    private void SpawnObjectOnClientsServerRPC(NetworkObject playerObject)
+    {
+        // Check if the player object is valid and has network ownership.
+        if (playerObject != null && playerObject.IsOwner)
+        {
+            // Instantiate the objectPrefab and make it a child of the player.
+            instantiatedObject = Instantiate(objectPrefab, playerObject.transform);
+            // Set local position and scale as needed.
+            instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f);
+            instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f);
+            // NetworkObject component needs to be spawned manually.
+            instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object has the "Player" tag.

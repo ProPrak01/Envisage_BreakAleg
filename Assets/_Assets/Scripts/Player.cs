@@ -12,7 +12,7 @@ public class Player : NetworkBehaviour
   //  PhotonView view;
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
-    private NetworkVariable<int> netvarint_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    private NetworkVariable<int> netvariable_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public InputAction playerControls;
     void Start()
     {
