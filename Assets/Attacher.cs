@@ -19,7 +19,7 @@ public class Attacher : NetworkBehaviour
     public Material originalMaterial;
     private GameObject instantiatedObject; // Reference to the instantiated object.
     public GameObject objectPrefab; // Reference to the instantiated object.
-
+    public bool buttonpressed = false;
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer blockRenderer; // Reference to the block's renderer.
 
@@ -54,7 +54,7 @@ public class Attacher : NetworkBehaviour
 
             }
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(KeyCode.E) /**&& instantiatedObject == null**/)
+            if (Input.GetKeyDown(KeyCode.E) || (buttonpressed == true)/**&& instantiatedObject == null**/)
             {
 
                 // Find the player with the "Player" tag.
@@ -82,6 +82,7 @@ public class Attacher : NetworkBehaviour
                         InstatiateServerRpc();
                     }
                 }
+                buttonpressed = false;
             }
         }
         else
@@ -161,5 +162,9 @@ public class Attacher : NetworkBehaviour
         instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
         
 
+    }
+    public void onbuttonclickfxn()
+    {
+        buttonpressed = true;
     }
 }

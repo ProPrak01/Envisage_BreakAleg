@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 //hello
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 //using Photon.Pun;
 
 
@@ -13,9 +14,14 @@ public class Player : NetworkBehaviour
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
     //private Joy input=null;
-    private NetworkVariable<int> netvariable_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
-    public InputAction playerControls;
+ //   private NetworkVariable<int> netvariable_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
+    public PlayerInputAction playerControls;
+    private InputAction move;
+    private void Awake()
+    {
+        playerControls = new PlayerInputAction();
 
+    }
     void Start()
     {
       //  input = new Joy();
@@ -25,29 +31,30 @@ public class Player : NetworkBehaviour
    
     private void OnEnable()
     {
-      //  input.Enable();
-
-        playerControls.Enable();
+        move = playerControls.Player.Move;
+        move.Enable();
+        //  input.Enable();
     }
     private void OnDisable()
     {
-        playerControls.Disable();
+        move.Disable();
        // input.Disable();
     }
     private bool isWalking;
     
     private void Update()
     {
-        if (!IsOwner) return;
-        Vector2 moveDir = playerControls.ReadValue<Vector2>();
-        Vector3 movedir2 = new Vector3(moveDir.x, 0, moveDir.y);
+        //  if (!IsOwner) return;
+        //Vector2 moveDir = playerControls.ReadValue<Vector2>();
+        Vector2 moveDir = move.ReadValue<Vector2>();
+        Vector3 movedir2 = new Vector3(moveDir.x,0 , moveDir.y);
             transform.position += movedir2 * moveSpeed * Time.deltaTime;
 
             isWalking = movedir2 != Vector3.zero;
 
-            float rotateSpeed = 10f;
-            transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
-
+        float rotateSpeed = 10f;
+            transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
+     
             animator.SetBool("IsWalking", isWalking);
         
         /**

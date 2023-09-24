@@ -20,6 +20,8 @@ public class TransferBlockController : NetworkBehaviour
 
     public KeyCode attachKey = KeyCode.E; // The key to press to attach/detach the object.
 
+    public GameObject attachertemp;
+
     public float p1p2 = 0;
     public float transferCooldown = 1.0f; // Cooldown time between transfers.
     private float lastTransferTime = 0f; // Time of the last transfer.
@@ -56,7 +58,7 @@ public class TransferBlockController : NetworkBehaviour
                 attachKey = KeyCode.O;
             }
             // Check if the player presses the attach key.
-            if (Input.GetKeyDown(attachKey) && player.transform.childCount == 2 /**&& Time.time - lastTransferTime >= transferCooldown**/)
+            if ((Input.GetKeyDown(attachKey) || (attachertemp.GetComponent<Attacher>().buttonpressed == true) )&& player.transform.childCount == 2 /**&& Time.time - lastTransferTime >= transferCooldown**/)
             {
                 // Find the player with the "Player" tag.
 
@@ -74,13 +76,15 @@ public class TransferBlockController : NetworkBehaviour
                     }
                 }
 
-                
+                attachertemp.GetComponent<Attacher>().buttonpressed = false;
 
             }
 
-            else if(Input.GetKeyDown(attachKey) && player.transform.childCount == 1)
+            else if((Input.GetKeyDown(attachKey) || (attachertemp.GetComponent<Attacher>().buttonpressed == true) )&& player.transform.childCount == 1)
             {
                 tempServerRpc();
+                attachertemp.GetComponent<Attacher>().buttonpressed = false;
+
             }
         }
         else

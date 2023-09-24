@@ -924,11 +924,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 5e453854-02fa-4e44-8a0f-4538e3e7958c
+  cloudProjectId: 626382ed-6e46-4bc2-8587-16466c68d2d3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Envisage BreakAleg
-  organizationId: shifa-gani-basheer
+  projectName: Envisage BreakAleg (2)
+  organizationId: prakash_01
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
