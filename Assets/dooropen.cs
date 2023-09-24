@@ -50,6 +50,7 @@ public class dooropen : NetworkBehaviour
         if (i && !isMoving)
         {
             StartCoroutine(MoveDoorSmoothly());
+            Camera.main.GetComponent<shakycamera>().StartShake();
         }
     }
 
