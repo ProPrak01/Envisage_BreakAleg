@@ -5,26 +5,34 @@ using Unity.Netcode;
 //hello
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using static UnityEngine.ParticleSystem;
 //using Photon.Pun;
-
 
 public class Player : NetworkBehaviour
 {
-  //  PhotonView view;
+  //  private ParticleSystem trail;
+    //  PhotonView view;
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
     //private Joy input=null;
  //   private NetworkVariable<int> netvariable_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public PlayerInputAction playerControls;
     private InputAction move;
+    public GameObject particle;
     private void Awake()
     {
+        
         playerControls = new PlayerInputAction();
 
     }
     void Start()
     {
-      //  input = new Joy();
+        
+      particle = GameObject.FindGameObjectWithTag("particles");
+
+        // trail = GetComponentInChildren<ParticleSystem>();
+        //  trail.Stop();
+        //  input = new Joy();
         animator = GetComponentInChildren<Animator>();
       //  view = GetComponent<PhotonView>();
     }
@@ -44,7 +52,9 @@ public class Player : NetworkBehaviour
     
     private void Update()
     {
-        //  if (!IsOwner) return;
+        particle.transform.position = transform.position;
+
+        if (!IsOwner) return;
         //Vector2 moveDir = playerControls.ReadValue<Vector2>();
         Vector2 moveDir = move.ReadValue<Vector2>();
         Vector3 movedir2 = new Vector3(moveDir.x,0 , moveDir.y);
@@ -54,7 +64,8 @@ public class Player : NetworkBehaviour
 
         float rotateSpeed = 10f;
             transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
-     
+      
+      
             animator.SetBool("IsWalking", isWalking);
         
         /**
