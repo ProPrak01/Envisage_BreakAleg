@@ -54,7 +54,7 @@ public class Player : NetworkBehaviour
     {
         particle.transform.position = transform.position;
 
-        if (!IsOwner) return;
+   //     if (!IsOwner) return;
         //Vector2 moveDir = playerControls.ReadValue<Vector2>();
         Vector2 moveDir = move.ReadValue<Vector2>();
         Vector3 movedir2 = new Vector3(moveDir.x,0 , moveDir.y);
@@ -62,7 +62,7 @@ public class Player : NetworkBehaviour
 
             isWalking = movedir2 != Vector3.zero;
 
-        float rotateSpeed = 10f;
+             float rotateSpeed = 10f;
             transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
       
       
