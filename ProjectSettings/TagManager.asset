@@ -11,6 +11,12 @@ TagManager:
   - 4
   - Player2
   - particles
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  - Mirror
+=======
+>>>>>>> Stashed changes
   - 11
   - 12
   - 13
@@ -35,6 +41,10 @@ TagManager:
   - 44
   - 45
   - 46
+<<<<<<< Updated upstream
+=======
+>>>>>>> 58c959f4c9cae57b8b9c6aaa8c0b066930296b55
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -42,7 +52,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Mirror
   - 
   - 
   - 
