@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -308,6 +309,8 @@ MonoBehaviour:
   value_id: 4
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &11663299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -771,6 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -779,6 +783,8 @@ MonoBehaviour:
   value_id: 5
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &167655142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -921,6 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -929,6 +936,8 @@ MonoBehaviour:
   value_id: 3
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &172254235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1441,6 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -1449,6 +1459,8 @@ MonoBehaviour:
   value_id: 10
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &361395444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1591,6 +1603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -1599,6 +1612,8 @@ MonoBehaviour:
   value_id: 8
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &384716544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1825,6 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -1833,6 +1849,8 @@ MonoBehaviour:
   value_id: 12
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &418616377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2189,6 +2207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -2197,6 +2216,8 @@ MonoBehaviour:
   value_id: 10
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &468422410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2445,6 +2466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -2453,6 +2475,8 @@ MonoBehaviour:
   value_id: 7
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &653816225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2725,6 +2749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -2733,6 +2758,8 @@ MonoBehaviour:
   value_id: 3
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &800902022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2875,6 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -2883,6 +2911,8 @@ MonoBehaviour:
   value_id: 2
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &821793206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3534,6 +3564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -3542,6 +3573,8 @@ MonoBehaviour:
   value_id: 12
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &937252892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3814,6 +3847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -3822,6 +3856,8 @@ MonoBehaviour:
   value_id: 9
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &956192516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4269,6 +4305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -4277,6 +4314,8 @@ MonoBehaviour:
   value_id: 8
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1067708871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4552,6 +4591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -4560,6 +4600,8 @@ MonoBehaviour:
   value_id: 11
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1221257325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4699,9 +4741,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f65b112dfee49e4a54a935fb432f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redcolor: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   removeobject1: {fileID: 0}
   removeobject2: {fileID: 0}
-  door: {fileID: 0}
+  door: {fileID: 1422392584}
+  slab: []
+  k: 
+  j: 0
 --- !u!1 &1230516095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,6 +4987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -4949,6 +4996,8 @@ MonoBehaviour:
   value_id: 6
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1418296073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5020,6 +5069,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418296069}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1422392584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8744200095703688165, guid: 9a1852f65b926433cae346dd8e722b6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2042991882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1431381285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,6 +5243,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1463711759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2993102924550936264, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: playerControls.m_SingletonActionBindings.Array.data[3].m_Path
+      value: <Keyboard>/leftArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993102924550936264, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: playerControls.m_SingletonActionBindings.Array.data[4].m_Path
+      value: <Keyboard>/rightArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993102924550936264, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: playerControls.m_SingletonActionBindings.Array.data[5].m_Path
+      value: <Keyboard>/upArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993102924550936264, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: playerControls.m_SingletonActionBindings.Array.data[6].m_Path
+      value: <Keyboard>/downArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.210275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.808201
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2664227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246776468480958033, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567893508049612339, guid: 5b72415d7056148bc82808728d4f978e,
+        type: 3}
+      propertyPath: m_Name
+      value: Player 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b72415d7056148bc82808728d4f978e, type: 3}
 --- !u!1 &1590851960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5259,6 +5402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -5267,6 +5411,8 @@ MonoBehaviour:
   value_id: 4
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1590851964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5689,6 +5835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -5697,6 +5844,8 @@ MonoBehaviour:
   value_id: 2
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1659399864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5839,6 +5988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -5847,6 +5997,8 @@ MonoBehaviour:
   value_id: 6
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1663100612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5989,6 +6141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -5997,6 +6150,8 @@ MonoBehaviour:
   value_id: 1
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1717441264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6223,6 +6378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -6231,6 +6387,8 @@ MonoBehaviour:
   value_id: 5
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1820828180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6373,6 +6531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -6381,6 +6540,8 @@ MonoBehaviour:
   value_id: 7
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &1823815993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7049,6 +7210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -7057,6 +7219,8 @@ MonoBehaviour:
   value_id: 1
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &2032761293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7329,6 +7493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -7337,6 +7502,8 @@ MonoBehaviour:
   value_id: 11
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &2034776050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7675,6 +7842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 0}
   rotationSpeed: 90
@@ -7683,6 +7851,8 @@ MonoBehaviour:
   value_id: 0
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!23 &2111261043
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7796,6 +7966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+  player2Tag: Player2
   interactionDistance: 2
   glowMaterial: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   rotationSpeed: 90
@@ -7804,6 +7975,8 @@ MonoBehaviour:
   value_id: 9
   i: 0
   j: 0
+  p1p2: 0
+  attachKey: 101
 --- !u!65 &2121953667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11907,3 +12080,4 @@ SceneRoots:
   - {fileID: 107110279}
   - {fileID: 861358179}
   - {fileID: 841895780}
+  - {fileID: 1463711759}

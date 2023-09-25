@@ -73,7 +73,7 @@ public class SlabInteract : MonoBehaviour
                 StartCoroutine(RotateBlock(originalRotation));
             }
             **/
-            FindObjectOfType<mastermindlvl2>().dooropenarray[i][j] = true;
+            FindObjectOfType<mastermindlvl2>().dooropenarray[i][j] = false;
 
         }
     }

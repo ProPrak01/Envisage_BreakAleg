@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class mastermindlvl2 : MonoBehaviour
 {
+    public Material redcolor;
+
     [SerializeField] private GameObject removeobject1;
     [SerializeField] private GameObject removeobject2;
     public GameObject door;
@@ -54,9 +56,10 @@ public class mastermindlvl2 : MonoBehaviour
     {
         if (dooropenarray[4][3] == true && dooropenarray[1][3] == true)
         {
-            Destroy(slab[43]);
-            Destroy(slab[43]);
-            k[23] = k[24] = 1;
+            slab[43].GetComponent<Renderer>().material = redcolor;
+           // Destroy(slab[43]);
+          //  Destroy(slab[43]);
+           // k[23] = k[24] = 1;
             //door.GetComponent<dooropen>().i = true;
 
         }
