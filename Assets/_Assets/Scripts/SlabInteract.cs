@@ -3,6 +3,8 @@ using System.Collections;
 public class SlabInteract : MonoBehaviour
 {
     public string playerTag = "Player"; // Tag of the player GameObject.
+    public string player2Tag = "Player2"; // Tag of the player GameObject.
+
     public float interactionDistance = 2.0f; // Distance to trigger interaction with the block.
     public Material glowMaterial; // Material to apply when the player is near the block.
     public float rotationSpeed = 45.0f; // Rotation speed in degrees per second.
@@ -18,6 +20,10 @@ public class SlabInteract : MonoBehaviour
     private Quaternion targetRotation; // Target rotation (180 degrees).
     private Quaternion originalRotation; // Original rotation of the block.
     public int i, j;
+    public float p1p2 = 0;
+    public KeyCode attachKey = KeyCode.E; // The key to press to attach/detach the object.
+
+
     void Start()
     {
         i = card_id / 10;
@@ -31,11 +37,24 @@ public class SlabInteract : MonoBehaviour
 
     void Update()
     {
+        GameObject player = null;
+        if (p1p2 == 1)
+        {
+
+            player = GameObject.FindGameObjectWithTag(playerTag);
+            attachKey = KeyCode.E;
+        }
+        else if (p1p2 == 2)
+        {
+
+            player = GameObject.FindGameObjectWithTag(player2Tag);
+            attachKey = KeyCode.O;
+        }
         if (isPlayerNear)
         {
             slabRenderer.material = glowMaterial;
 
-            if (Input.GetKeyDown(KeyCode.E) && !isRotating)
+            if (Input.GetKeyDown(attachKey) && !isRotating)
             {
                 // Start the rotation when the player presses "E".
                 StartCoroutine(RotateBlock(targetRotation));
@@ -61,18 +80,37 @@ public class SlabInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+     
         if (other.CompareTag(playerTag))
         {
             isPlayerNear = true;
+            p1p2 = 1;
+        }
+        else if (other.CompareTag(player2Tag))
+        {
+            isPlayerNear = true;
+            p1p2 = 2;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+      
+        // Check if the colliding object has the "Player" tag.
         if (other.CompareTag(playerTag))
         {
+
             isPlayerNear = false;
+            p1p2 = 0;
             StartCoroutine(RotateBlock(originalRotation));
+
+        }
+        else if (other.CompareTag(player2Tag))
+        {
+            isPlayerNear = false;
+            p1p2 = 0;
+            StartCoroutine(RotateBlock(originalRotation));
+
         }
     }
 
