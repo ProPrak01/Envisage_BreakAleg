@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 361395442}
   m_Layer: 0
   m_Name: 11-10
-  m_TagString: 11
+  m_TagString: temp0
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4745,7 +4745,31 @@ MonoBehaviour:
   removeobject1: {fileID: 0}
   removeobject2: {fileID: 0}
   door: {fileID: 1422392584}
-  slab: []
+  slab:
+  - {fileID: 361395440}
+  - {fileID: 172254231}
+  - {fileID: 1717441260}
+  - {fileID: 418616373}
+  - {fileID: 11663295}
+  - {fileID: 384716540}
+  - {fileID: 2034776046}
+  - {fileID: 1067708867}
+  - {fileID: 2121953663}
+  - {fileID: 1659399860}
+  - {fileID: 800902018}
+  - {fileID: 956192512}
+  - {fileID: 821793202}
+  - {fileID: 1221257321}
+  - {fileID: 468422406}
+  - {fileID: 1590851960}
+  - {fileID: 1820828176}
+  - {fileID: 1418296069}
+  - {fileID: 1663100608}
+  - {fileID: 167655138}
+  - {fileID: 2032761289}
+  - {fileID: 1823815989}
+  - {fileID: 653816221}
+  - {fileID: 937252888}
   k: 
   j: 0
 --- !u!1 &1230516095

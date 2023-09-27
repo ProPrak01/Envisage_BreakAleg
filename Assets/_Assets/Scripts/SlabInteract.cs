@@ -58,7 +58,7 @@ public class SlabInteract : MonoBehaviour
             {
                 // Start the rotation when the player presses "E".
                 StartCoroutine(RotateBlock(targetRotation));
-                FindObjectOfType<mastermindlvl2>().dooropenarray[i][j] = true;
+                FindObjectOfType<mastermindlvl2>().dooropenarray[i,j] = true;
 
             }
         }
@@ -73,7 +73,7 @@ public class SlabInteract : MonoBehaviour
                 StartCoroutine(RotateBlock(originalRotation));
             }
             **/
-            FindObjectOfType<mastermindlvl2>().dooropenarray[i][j] = false;
+            FindObjectOfType<mastermindlvl2>().dooropenarray[i,j] = false;
 
         }
     }
