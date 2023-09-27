@@ -36,7 +36,6 @@ TagManager:
   - 3
   - Player2
   - particles
-  - temp0
   layers:
   - Default
   - TransparentFX
