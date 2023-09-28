@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.18156222, g: 0.22720625, b: 0.3074067, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -696,6 +700,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &960233237
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +912,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90.38202, y: 90.001, z: 0.0010070801}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1025956154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1341,9 @@ SceneRoots:
   - {fileID: 1025956158}
   - {fileID: 1185659310}
   - {fileID: 720026531}
+<<<<<<< Updated upstream
   - {fileID: 984855230}
   - {fileID: 960233241}
   - {fileID: 2018992989}
+=======
+>>>>>>> Stashed changes
