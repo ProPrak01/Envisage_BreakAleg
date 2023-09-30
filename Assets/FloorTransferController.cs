@@ -73,10 +73,11 @@ public class TransferBlockController : NetworkBehaviour
                     {
                         // Transfer the child object from the player to the block.
                         TransferChildObjectServerRpc();
+                        attachertemp.GetComponent<Attacher>().buttonpressed = false;
                     }
                 }
 
-                attachertemp.GetComponent<Attacher>().buttonpressed = false;
+                
 
             }
 

@@ -84,6 +84,31 @@ public class Attacher : NetworkBehaviour
                 }
                 buttonpressed = false;
             }
+            if (buttonpressed == true)
+                if (player != null)
+                {
+                    // Calculate the distance between the player and the block.
+                    float distance = Vector3.Distance(player.transform.position, transform.position);
+
+                    // Check if the player is within the interaction distance.
+                    if (distance <= interactionDistance)
+                    {
+                        //  PhotonNetwork.Instantiate(playerprefab.name, player.transform.position, Quaternion.identity);
+
+
+                        // Instantiate the objectPrefab and make it a child of the player.
+                        //instantiatedObject = PhotonNetwork.Instantiate(number, player.transform.position, Quaternion.identity);
+                        /**  instantiatedObject = Instantiate(objectPrefab, player.transform);
+                          instantiatedObject.GetComponent<NetworkObject>().Spawn(true);
+                          //  instantiatedObject.transform.parent = player.transform;
+                          instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
+                          instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
+                        **/
+                        InstatiateServerRpc();
+                        buttonpressed = false;
+
+                    }
+                }
         }
         else
         {
@@ -137,7 +162,8 @@ public class Attacher : NetworkBehaviour
         if (p1p2 == 1)
         {
             player = GameObject.FindGameObjectWithTag(playerTag);
-            attachKey = KeyCode.E;
+            if (Input.GetKeyDown(KeyCode.E) || (buttonpressed == true)/**&& instantiatedObject == null**/)
+                attachKey = KeyCode.E;
             // attachKey = KeyCode.O;    // shuffledcontrolled
 
         }
