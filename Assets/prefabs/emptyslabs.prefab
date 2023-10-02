@@ -106,6 +106,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &2458838441432686070
@@ -235,6 +236,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &6559816673665456729
@@ -364,6 +366,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &5966594273091055388
@@ -494,6 +497,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &7870904003994011226
@@ -623,6 +627,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &3746701286800060411
@@ -753,6 +758,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &7844132284756453479
@@ -883,6 +889,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &6378330810566360362
@@ -1012,6 +1019,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &339765860243996431
@@ -1142,6 +1150,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &1698182097155707311
@@ -1271,6 +1280,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &8349907437211019671
@@ -1400,6 +1410,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &6241720737201080534
@@ -1529,6 +1540,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &3562906936329013225
@@ -1659,6 +1671,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &7415469668597388774
@@ -1788,6 +1801,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &2414761376341998230
@@ -1996,6 +2010,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &1071208686125296425
@@ -2125,6 +2140,7 @@ MonoBehaviour:
   glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
   originalMaterial: {fileID: 0}
   attachKey: 101
+  attachertemp: {fileID: 0}
   p1p2: 0
   transferCooldown: 1
 --- !u!65 &8004298619280067066
@@ -2156,6 +2172,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5582200542908992513}
     m_Modifications:
+    - target: {fileID: 291583610627153113, guid: 24243ddb5f78a46e78289017d13a30d1,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 1689830557818598448, guid: 24243ddb5f78a46e78289017d13a30d1,
         type: 3}
       propertyPath: m_Name
@@ -2305,6 +2326,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5153293228986532527, guid: b685f1163c16645749295239ffb5a229,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2413,6 +2439,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2915013865068831759}
     m_Modifications:
+    - target: {fileID: -6316357857736856199, guid: 77e86c306223f40269db5aff084bcf89,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 4623828712016570525, guid: 77e86c306223f40269db5aff084bcf89,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2497,6 +2528,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2680054211528382198}
     m_Modifications:
+    - target: {fileID: 6799704270383645711, guid: 2518a7d85d8064950a798116eb0e8b23,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
         type: 3}
       propertyPath: m_Name
