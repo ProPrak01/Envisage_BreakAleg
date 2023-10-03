@@ -67,7 +67,8 @@ public class Attacher : NetworkBehaviour
 
                     // Check if the player is within the interaction distance.
                     if (distance <= interactionDistance)
-                    {
+                    {   
+
                         //  PhotonNetwork.Instantiate(playerprefab.name, player.transform.position, Quaternion.identity);
 
 
@@ -84,6 +85,7 @@ public class Attacher : NetworkBehaviour
                 }
                 buttonpressed = false;
             }
+            /**
             if (buttonpressed == true)
                 if (player != null)
                 {
@@ -103,12 +105,12 @@ public class Attacher : NetworkBehaviour
                           //  instantiatedObject.transform.parent = player.transform;
                           instantiatedObject.transform.localPosition = new Vector3(0f, 3.2f, 0f); // Example position.
                           instantiatedObject.transform.localScale = new Vector3(1f, 1f, 1f); // Example position.
-                        **/
+                        
                         InstatiateServerRpc();
                         buttonpressed = false;
 
                     }
-                }
+                }**/
         }
         else
         {
@@ -122,6 +124,7 @@ public class Attacher : NetworkBehaviour
         // Check if the colliding object has the "Player" tag.
         if (other.CompareTag(playerTag) || other.CompareTag(player2Tag))
         {
+
             if (other.CompareTag(playerTag))
             {
                 p1p2 = 1;
@@ -189,8 +192,33 @@ public class Attacher : NetworkBehaviour
         
 
     }
-    public void onbuttonclickfxn()
+    public void onbuttonclickfxn( )
     {
-        buttonpressed = true;
+        GameObject player = null;
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        /*  if (p1p2 == 1)
+          {
+              player = GameObject.FindGameObjectWithTag(playerTag);
+              attachKey = KeyCode.E;
+              // attachKey = KeyCode.O;    // shuffledcontrolled
+
+          }
+          else if (p1p2 == 2)
+          {
+              player = GameObject.FindGameObjectWithTag(player2Tag);
+              attachKey = KeyCode.O;
+              // attachKey = KeyCode.E;    // shuffledcontrolled
+
+
+          }*/
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+
+        if (distance <= interactionDistance)
+        {
+           
+
+            buttonpressed = true;
+        }
     }
 }
