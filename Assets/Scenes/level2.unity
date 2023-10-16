@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17670164, g: 0.22118022, b: 0.30348152, a: 1}
+  m_IndirectSpecularColor: {r: 0.1767016, g: 0.22117996, b: 0.30348143, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -307,6 +307,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 15
   value_id: 4
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -641,6 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 7
   numberneeded: 1
   playerTag: Player
@@ -781,6 +784,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 42
   value_id: 5
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -934,6 +939,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 12
   value_id: 3
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -1457,6 +1464,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 11
   value_id: 10
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -1610,6 +1619,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 16
   value_id: 8
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -1847,6 +1858,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 14
   value_id: 12
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -1990,6 +2003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 0
   numberneeded: 4
   playerTag: Player
@@ -2214,6 +2228,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 33
   value_id: 10
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -2473,6 +2489,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 45
   value_id: 7
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -2616,6 +2634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 0
   numberneeded: 4
   playerTag: Player
@@ -2756,6 +2775,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 25
   value_id: 3
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -2909,6 +2930,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 31
   value_id: 2
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -3571,6 +3594,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 46
   value_id: 12
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -3714,6 +3739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 4
   numberneeded: 4
   playerTag: Player
@@ -3854,6 +3880,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 26
   value_id: 9
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -4312,6 +4340,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 22
   value_id: 8
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -4598,6 +4628,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 32
   value_id: 11
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -4741,37 +4773,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f65b112dfee49e4a54a935fb432f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redcolor: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
-  removeobject1: {fileID: 0}
-  removeobject2: {fileID: 0}
-  door: {fileID: 1422392584}
-  slab:
-  - {fileID: 361395440}
-  - {fileID: 172254231}
+  RedColor: {fileID: 0}
+  RemoveObject1: {fileID: 0}
+  RemoveObject2: {fileID: 0}
+  Door: {fileID: 0}
+  Slabs:
+  - {fileID: 2032761289}
   - {fileID: 1717441260}
-  - {fileID: 418616373}
-  - {fileID: 11663295}
-  - {fileID: 384716540}
-  - {fileID: 2034776046}
-  - {fileID: 1067708867}
-  - {fileID: 2121953663}
   - {fileID: 1659399860}
-  - {fileID: 800902018}
-  - {fileID: 956192512}
   - {fileID: 821793202}
-  - {fileID: 1221257321}
-  - {fileID: 468422406}
+  - {fileID: 800902018}
+  - {fileID: 172254231}
+  - {fileID: 11663295}
   - {fileID: 1590851960}
   - {fileID: 1820828176}
+  - {fileID: 167655138}
   - {fileID: 1418296069}
   - {fileID: 1663100608}
-  - {fileID: 167655138}
-  - {fileID: 2032761289}
-  - {fileID: 1823815989}
   - {fileID: 653816221}
+  - {fileID: 1823815989}
+  - {fileID: 384716540}
+  - {fileID: 1067708867}
+  - {fileID: 956192512}
+  - {fileID: 2121953663}
+  - {fileID: 361395440}
+  - {fileID: 468422406}
+  - {fileID: 2034776046}
+  - {fileID: 1221257321}
+  - {fileID: 418616373}
   - {fileID: 937252888}
-  k: 
-  j: 0
+  K: 
 --- !u!1 &1230516095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5018,6 +5049,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 36
   value_id: 6
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -5093,12 +5126,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418296069}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1422392584 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8744200095703688165, guid: 9a1852f65b926433cae346dd8e722b6a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2042991882}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1431381285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,6 +5460,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 34
   value_id: 4
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -5866,6 +5895,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 24
   value_id: 2
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -6019,6 +6050,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 41
   value_id: 6
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -6172,6 +6205,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 13
   value_id: 1
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -6409,6 +6444,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 35
   value_id: 5
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -6562,6 +6599,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 44
   value_id: 7
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -7241,6 +7280,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 43
   value_id: 1
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -7384,6 +7425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 2
   numberneeded: 3
   playerTag: Player
@@ -7524,6 +7566,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 21
   value_id: 11
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -7607,6 +7651,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7408346705119580792, guid: 9a1852f65b926433cae346dd8e722b6a,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 4026973315
+      objectReference: {fileID: 0}
     - target: {fileID: 3683735251562015083, guid: 9a1852f65b926433cae346dd8e722b6a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7841,18 +7890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00501cf2bc16dc24b993e82042cc249d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idofemptyblock: 0
-  playerTag: Player
-  player2Tag: Player2
-  flipObject: {fileID: 6984536987479226595, guid: 0831d392a18e54fb8ad823cf21256d73,
-    type: 3}
-  interactionDistance: 2
-  glowMaterial: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
-  glowMaterial2: {fileID: 2100000, guid: c93fba0e4fadd4f258f687352ba1cfc0, type: 2}
-  originalMaterial: {fileID: 2100000, guid: 5a3fb956966eb4bfda9bcbb4d471d118, type: 2}
-  attachKey: 101
-  p1p2: 0
-  transferCooldown: 1
 --- !u!114 &2111261042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7873,6 +7910,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 0
   value_id: 0
+  isRotating: 0
+  mastermindlvl2: {fileID: 0}
   i: 0
   j: 0
   p1p2: 0
@@ -7997,6 +8036,8 @@ MonoBehaviour:
   animationParameter: IsActivated
   card_id: 23
   value_id: 9
+  isRotating: 0
+  mastermindlvl2: {fileID: 1226859184}
   i: 0
   j: 0
   p1p2: 0
@@ -8643,6 +8684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 1
   numberneeded: 1
   playerTag: Player
@@ -9360,6 +9402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 4
   numberneeded: 4
   playerTag: Player
@@ -9384,6 +9427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 10
   numberneeded: 2
   playerTag: Player
@@ -9466,6 +9510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 0
   numberneeded: 4
   playerTag: Player
@@ -9996,6 +10041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 8
   numberneeded: 1
   playerTag: Player
@@ -10389,6 +10435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 3
   numberneeded: 3
   playerTag: Player
@@ -10542,6 +10589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 11
   numberneeded: 0
   playerTag: Player
@@ -10808,6 +10856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 6
   numberneeded: 0
   playerTag: Player
@@ -10892,6 +10941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 7
   numberneeded: 1
   playerTag: Player
@@ -11113,6 +11163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 5
   numberneeded: 4
   playerTag: Player
@@ -11294,6 +11345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 6
   numberneeded: 2
   playerTag: Player
@@ -11402,6 +11454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 9
   numberneeded: 3
   playerTag: Player
@@ -11543,6 +11596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 1
   numberneeded: 2
   playerTag: Player
@@ -11829,6 +11883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 2
   numberneeded: 3
   playerTag: Player
@@ -11853,6 +11908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 16
   numberneeded: 0
   playerTag: Player
@@ -12046,6 +12102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c879733da144802964edbe6c4c32ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonpressed: 0
   idofemptyblock: 8
   numberneeded: 0
   playerTag: Player

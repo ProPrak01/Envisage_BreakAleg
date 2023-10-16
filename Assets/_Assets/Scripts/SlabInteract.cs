@@ -7,6 +7,8 @@ public class SlabInteract : MonoBehaviour
 
     public float interactionDistance = 2.0f; // Distance to trigger interaction with the block.
     public Material glowMaterial; // Material to apply when the player is near the block.
+   // public Material glowMaterial3; // Material to apply when the player is near the block.
+
     public float rotationSpeed = 45.0f; // Rotation speed in degrees per second.
     public string animationParameter = "IsActivated"; // Name of the animation parameter.
     public int card_id;
@@ -15,13 +17,14 @@ public class SlabInteract : MonoBehaviour
     private bool isPlayerNear = false; // Flag to track player proximity.
     private Renderer slabRenderer; // Reference to the slab's renderer.
     private Material originalMaterial; // Store the original material.
-    private bool isRotating = false; // Flag to track if the block is currently rotating.
+    public bool isRotating = false; // Flag to track if the block is currently rotating.
     private Quaternion startRotation; // Starting rotation of the block.
     private Quaternion targetRotation; // Target rotation (180 degrees).
     private Quaternion originalRotation; // Original rotation of the block.
+    public GameObject mastermindlvl2;
     public int i, j;
     public float p1p2 = 0;
-    public KeyCode attachKey = KeyCode.E; // The key to press to attach/detach the object.
+    public KeyCode attachKey; // The key to press to attach/detach the object.
 
 
     void Start()
@@ -56,9 +59,12 @@ public class SlabInteract : MonoBehaviour
 
             if (Input.GetKeyDown(attachKey) && !isRotating)
             {
+                Debug.Log("Hello world");
+             //   slabRenderer.material = glowMaterial3;
+
                 // Start the rotation when the player presses "E".
                 StartCoroutine(RotateBlock(targetRotation));
-                FindObjectOfType<mastermindlvl2>().dooropenarray[i,j] = true;
+                mastermindlvl2.GetComponent<mastermindlvl2>().DoorOpenArray[i,j] = true;
 
             }
         }
@@ -73,7 +79,7 @@ public class SlabInteract : MonoBehaviour
                 StartCoroutine(RotateBlock(originalRotation));
             }
             **/
-            FindObjectOfType<mastermindlvl2>().dooropenarray[i,j] = false;
+            mastermindlvl2.GetComponent<mastermindlvl2>().DoorOpenArray[i,j] = false;
 
         }
     }
