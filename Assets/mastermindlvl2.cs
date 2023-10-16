@@ -185,11 +185,13 @@ public class mastermindlvl2 : MonoBehaviour
     {/**
         Debug.Log(DoorOpenArray[row1, col1]);
         Debug.Log(DoorOpenArray[row2, col2]);**/
-
+       
+        //Debug.Log(DoorOpenArray[row1, col1]);
+        //Debug.Log(DoorOpenArray[row2, col2]);
         if (DoorOpenArray[row1, col1] && DoorOpenArray[row2, col2])
         {
-            Debug.Log($"Disabling Slabs {index1} and {index2}");
-            Debug.Log(DoorOpenArray[row1, col1]);
+           // Debug.Log($"Disabling Slabs {index1} and {index2}");
+           Debug.Log(DoorOpenArray[row1, col1]);
             Debug.Log(DoorOpenArray[row2, col2]);
             Slabs[index1].SetActive(false);
             Slabs[index2].SetActive(false);
