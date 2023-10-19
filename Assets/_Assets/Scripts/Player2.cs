@@ -12,27 +12,27 @@ public class Player2 : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
     }
-    private void OnEnable()
+    /*private void OnEnable()
     {
         playerControls.Enable();
     }
     private void OnDisable()
     {
         playerControls.Disable();
-    }
+    }*/
     private bool isWalking;
 
     private void Update()
     {
-        /**
+        
         Vector2 inputVector = new Vector2(0, 0);
 
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.UpArrow))
         {
             inputVector.y = +1;
         }
 
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetKey(KeyCode.DownArrow))
         {
             inputVector.y = -1;
         }
@@ -49,10 +49,10 @@ public class Player2 : MonoBehaviour
 
         
         inputVector = inputVector.normalized;
-        **/
-        //  Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         
-        Vector3 moveDir = playerControls.ReadValue<Vector3>();
+       Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        
+        // Vector3 moveDir = playerControls.ReadValue<Vector3>();
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 

@@ -37,7 +37,7 @@ public class Player : NetworkBehaviour
       //  view = GetComponent<PhotonView>();
     }
    
-    private void OnEnable()
+    /*private void OnEnable()
     {
         move = playerControls.Player.Move;
         move.Enable();
@@ -47,28 +47,18 @@ public class Player : NetworkBehaviour
     {
         move.Disable();
        // input.Disable();
-    }
+    }*/
     private bool isWalking;
     
     private void Update()
     {
-        particle.transform.position = transform.position;
+        //particle.transform.position = transform.position;
 
    //     if (!IsOwner) return;
         //Vector2 moveDir = playerControls.ReadValue<Vector2>();
-        Vector2 moveDir = move.ReadValue<Vector2>();
-        Vector3 movedir2 = new Vector3(moveDir.x,0 , moveDir.y);
-            transform.position += movedir2 * moveSpeed * Time.deltaTime;
+        //Vector2 moveDir = move.ReadValue<Vector2>();
 
-            isWalking = movedir2 != Vector3.zero;
-
-             float rotateSpeed = 10f;
-            transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
-      
-      
-            animator.SetBool("IsWalking", isWalking);
         
-        /**
         Vector2 inputVector = new Vector2(0, 0);
 
         if(Input.GetKey(KeyCode.W))
@@ -81,20 +71,29 @@ public class Player : NetworkBehaviour
             inputVector.y = -1;
         }
 
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.RightArrow))
         {
             inputVector.x = +1;
         }
 
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.LeftArrow))
         {
             inputVector.x = -1;
         }
 
         
         inputVector = inputVector.normalized;
-        **/
-        //  Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         
+        //Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        Vector3 movedir2 = new Vector3(inputVector.x, 0, inputVector.y);
+        transform.position += movedir2 * moveSpeed * Time.deltaTime;
+
+        isWalking = movedir2 != Vector3.zero;
+
+        float rotateSpeed = 10f;
+        transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
+
+
+        animator.SetBool("IsWalking", isWalking);
     }
 }
