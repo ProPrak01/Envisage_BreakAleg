@@ -54,7 +54,7 @@ public class Attacher : NetworkBehaviour
 
             }
             // Check if the player presses the attach key and no object is attached to the player.
-            if (Input.GetKeyDown(KeyCode.E) || (buttonpressed == true)/**&& instantiatedObject == null**/)
+            if (Input.GetKeyDown(attachKey) || (buttonpressed == true)/**&& instantiatedObject == null**/)
             {
 
                 // Find the player with the "Player" tag.
