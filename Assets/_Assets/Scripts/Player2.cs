@@ -37,12 +37,12 @@ public class Player2 : MonoBehaviour
             inputVector.y = -1;
         }
 
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.RightArrow))
         {
             inputVector.x = +1;
         }
 
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.LeftArrow))
         {
             inputVector.x = -1;
         }

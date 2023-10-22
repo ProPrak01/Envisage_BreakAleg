@@ -71,12 +71,12 @@ public class Player : NetworkBehaviour
             inputVector.y = -1;
         }
 
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.D))
         {
             inputVector.x = +1;
         }
 
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.A))
         {
             inputVector.x = -1;
         }
