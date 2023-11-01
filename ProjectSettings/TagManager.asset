@@ -36,6 +36,7 @@ TagManager:
   - 3
   - Player2
   - particles
+  - Attacher
   layers:
   - Default
   - TransparentFX
