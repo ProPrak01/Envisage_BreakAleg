@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7482178896756544474}
   - component: {fileID: -2316551493824548213}
   - component: {fileID: -1974931856929251121}
+  - component: {fileID: 8177397153078663966}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -164,7 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01cf9035d0a545ad86f5f694895413e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockTag: Attacher
+  blockTag1: Attacher1
+  blockTag2: Attacher2
+  blockTag3: Attacher3
+  blockTag4: Attacher4
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
   numberPrefab2: {fileID: 1263506596452181544, guid: b685f1163c16645749295239ffb5a229,
@@ -173,9 +177,22 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
+  choosenPrefab: {fileID: 0}
   attachKey: 101
-  glowM: {fileID: 0}
+  glowM: {fileID: 2100000, guid: a8421ee4a772a4271a0d8d91424c0dbd, type: 2}
   normalM: {fileID: 0}
+--- !u!114 &8177397153078663966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477537538426491398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2840194925381786350
 PrefabInstance:
   m_ObjectHideFlags: 0

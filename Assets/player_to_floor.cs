@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class attacher_to_player : NetworkBehaviour
+public class player_to_floor : NetworkBehaviour
 {
 
     public string blockTag1 = "Attacher1";
@@ -22,7 +22,7 @@ public class attacher_to_player : NetworkBehaviour
     public Material normalM;
     private bool isAttached = false;
     private NetworkObject attachedObject;
-    
+
 
 
     private void Update()
@@ -34,7 +34,7 @@ public class attacher_to_player : NetworkBehaviour
         {
             TryAttach();
         }
-       
+
     }
 
     private void TryAttach()
@@ -42,10 +42,10 @@ public class attacher_to_player : NetworkBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, 1.0f); // Adjust the radius as needed
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag(blockTag1)|| collider.CompareTag(blockTag2)|| collider.CompareTag(blockTag3)|| collider.CompareTag(blockTag4))
+            if (collider.CompareTag(blockTag1) || collider.CompareTag(blockTag2) || collider.CompareTag(blockTag3) || collider.CompareTag(blockTag4))
             {
-               
-                normalM =  collider.gameObject.GetComponentInChildren<Renderer>().material;
+
+                normalM = collider.gameObject.GetComponentInChildren<Renderer>().material;
                 collider.gameObject.GetComponentInChildren<Renderer>().material = glowM;
 
                 NetworkObject networkObjectToAttach = collider.gameObject.GetComponent<NetworkObject>();
@@ -74,14 +74,14 @@ public class attacher_to_player : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void SpawnNumberOnServerRpc()
     {
-        
-      
+
+
 
         if (!isAttached)
         {
             Debug.Log("bro");
             Vector3 displacement = new Vector3(0f, 3f, 0f);
-            GameObject number = Instantiate(choosenPrefab, transform.position + displacement , Quaternion.identity);
+            GameObject number = Instantiate(choosenPrefab, transform.position + displacement, Quaternion.identity);
             NetworkObject numberNetworkObject = number.GetComponent<NetworkObject>();
 
             if (numberNetworkObject != null)

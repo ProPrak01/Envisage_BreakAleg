@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
 using UnityEngine.UI;
 
@@ -16,7 +17,12 @@ public class Character_select : MonoBehaviour
         mainMenuButton.onClick.AddListener(() =>
         {
             NetworkManager.Singleton.Shutdown();
+            SceneManager.LoadScene(0);
 
+        });
+        readyButton.onClick.AddListener(() =>
+        {
+            characterSelectReady.Instance.setPlayerReady();
         });
     }
 }
