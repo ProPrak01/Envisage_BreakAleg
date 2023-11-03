@@ -19,6 +19,7 @@ public class Player : NetworkBehaviour
 
     private ulong clientId_test;
     private ulong clientId_test1;
+    private ulong passClientId_test;
 
     private void Awake()
     {
@@ -42,13 +43,14 @@ public class Player : NetworkBehaviour
         //  view = GetComponent<PhotonView>();
         if (OwnerClientId == clientId_test)
         {
-
+            passClientId_test = clientId_test1;
         }
         else if (OwnerClientId == clientId_test1)
         {
+            passClientId_test = clientId_test;
 
         }
-       
+
 
         PlayerData playerData = GameNetworkManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
         playerVisual.SetPlayerColor(GameNetworkManager.Instance.GetPlayerColor(playerData.colorId));
@@ -112,7 +114,7 @@ public class Player : NetworkBehaviour
 
         //inputVector.x = Input.GetAxis("Horizontal");
         //inputVector.y = Input.GetAxis("Vertical");
-        SendInputToServerRpc(inputVector,clientId_test,OwnerClientId,clientId_test1);
+        SendInputToServerRpc(inputVector, passClientId_test);
         inputVector = inputVector.normalized;
         
         //Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
@@ -128,14 +130,37 @@ public class Player : NetworkBehaviour
         animator.SetBool("IsWalking", isWalking);
     }
     [ServerRpc(RequireOwnership = false)]
-    private void SendInputToServerRpc(Vector2 input,ulong clientId_test, ulong ownerid,ulong clientId_test1)
+    private void SendInputToServerRpc(Vector2 input, ulong passedId)
     {
         // Apply the input on the server and synchronize it with clients
-        // MovePlayerClientRpc(input);
-        if (ownerid ==clientId_test)
+        MovePlayerClientRpc(input, passedId);
+      
+        }
+    /**
+    Vector3 moveDir = new Vector3(input.x * 1000, 0f, input.y * 1000);
+    //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+    transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
+
+    float rotateSpeed = 10f;
+    transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
+    //  float rotateSpeed = 10f;
+    // Optionally, update the player's rotation based on the movement direction
+    if (moveDir != Vector3.zero)
+    {
+        transform.rotation = Quaternion.LookRotation(moveDir);
+    }
+    **/
+
+
+    [ClientRpc]
+    private void MovePlayerClientRpc(Vector2 input, ulong passedId)
+    {
+        // Exclude the local player (IsOwner) from movement
+        if (OwnerClientId == passedId)
         {
 
-            Vector3 moveDir = new Vector3(input.x * 1000, 0f, input.y * 1000);
+            // Apply the movement on all clients
+            Vector3 moveDir = new Vector3(input.x , 0f, input.y);
             //  transform.position += moveDir * moveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
 
@@ -147,43 +172,8 @@ public class Player : NetworkBehaviour
             {
                 transform.rotation = Quaternion.LookRotation(moveDir);
             }
-
         }
-        /**
-        Vector3 moveDir = new Vector3(input.x * 1000, 0f, input.y * 1000);
-        //  transform.position += moveDir * moveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
-
-        float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
-        //  float rotateSpeed = 10f;
-        // Optionally, update the player's rotation based on the movement direction
-        if (moveDir != Vector3.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(moveDir);
-        }
-        **/
     }
-    /**
-    [ClientRpc]
-    private void MovePlayerClientRpc(Vector2 input)
-    {
-        // Exclude the local player (IsOwner) from movement
-       
-            // Apply the movement on all clients
-            Vector3 moveDir = new Vector3(input.x*1000, 0f, input.y*1000);
-            //  transform.position += moveDir * moveSpeed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
-
-            float rotateSpeed = 10f;
-            transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
-          //  float rotateSpeed = 10f;
-            // Optionally, update the player's rotation based on the movement direction
-            if (moveDir != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(moveDir);
-            }
-        }
-    **/
+    
     
 }
