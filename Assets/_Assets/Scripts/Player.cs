@@ -32,7 +32,7 @@ public class Player : NetworkBehaviour
         // trail = GetComponentInChildren<ParticleSystem>();
         //  trail.Stop();
         //  input = new Joy();
-        animator = GetComponentInChildren<Animator>();
+       // animator = GetComponentInChildren<Animator>();
         //  view = GetComponent<PhotonView>();
 
 
@@ -55,13 +55,15 @@ public class Player : NetworkBehaviour
     
     private void Update()
     {
+        animator = GetComponentInChildren<Animator>();
+
         //particle.transform.position = transform.position;
 
-   //     if (!IsOwner) return;
+        //     if (!IsOwner) return;
         //Vector2 moveDir = playerControls.ReadValue<Vector2>();
         //Vector2 moveDir = move.ReadValue<Vector2>();
 
-        
+
         Vector2 inputVector = new Vector2(0, 0);
 
         if(Input.GetKey(KeyCode.W))
@@ -99,4 +101,7 @@ public class Player : NetworkBehaviour
 
         animator.SetBool("IsWalking", isWalking);
     }
+
+
+
 }

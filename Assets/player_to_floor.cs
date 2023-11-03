@@ -50,9 +50,10 @@ public class player_to_floor : NetworkBehaviour
         if (!IsOwner)
             return;
         **/
-        if (Input.GetKeyDown(attachKey) && !isAttached)
+        if (Input.GetKeyDown(attachKey) && !isAttached && transform.childCount < 1)
         {
             TryAttach();
+            RemoveChildObjectsOnServerRpc(NetworkManager.LocalClientId);
         }
 
     }
@@ -117,7 +118,7 @@ public class player_to_floor : NetworkBehaviour
         if (!isAttached)
         {
             Debug.Log("bro");
-            Vector3 displacement = new Vector3(0f, 3f, 0f);
+            Vector3 displacement = new Vector3(0f, 0f, 0f);
             GameObject number = null;
             if (receivedData.intValue == 1)
             {
@@ -160,6 +161,8 @@ public class player_to_floor : NetworkBehaviour
             isAttached = true;
             numberNetworkObject.transform.SetParent(transform);
             numberNetworkObject.transform.localScale = new Vector3(1f, 1f, 1f);
+            numberNetworkObject.transform.rotation =  Quaternion.Euler(0, 180, 0);
+
         }
     }
 
@@ -169,7 +172,30 @@ public class player_to_floor : NetworkBehaviour
         isAttached = true;
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void RemoveChildObjectsOnServerRpc(ulong clientOwnerId)
+    {
+        if (IsServer)
+        {
+            NetworkObject playerNetworkObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(clientOwnerId);
 
+            if (playerNetworkObject != null)
+            {
+                Transform playerTransform = playerNetworkObject.transform;
+
+                // Remove all child objects of the player object
+                foreach (Transform child in playerTransform)
+                {
+                    NetworkObject childNetworkObject = child.GetComponent<NetworkObject>();
+                    if (childNetworkObject != null)
+                    {
+                        childNetworkObject.Despawn();
+                    }
+                }
+
+            }
+        }
+    }
 
 
 }
