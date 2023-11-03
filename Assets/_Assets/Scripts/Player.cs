@@ -17,6 +17,8 @@ public class Player : NetworkBehaviour
 
     [SerializeField] PlayerVisual playerVisual;
 
+    private ulong clientId_test;
+    private ulong clientId_test1;
 
     private void Awake()
     {
@@ -28,13 +30,25 @@ public class Player : NetworkBehaviour
     {
         
       particle = GameObject.FindGameObjectWithTag("particles");
-
+        PlayerData playerdata = GameNetworkManager.Instance.GetPlayerDataFromPlayerIndex(0);
+        PlayerData playerdata1 = GameNetworkManager.Instance.GetPlayerDataFromPlayerIndex(1);
+        
+        clientId_test = playerdata.clientId;
+        clientId_test1 = playerdata1.clientId;
         // trail = GetComponentInChildren<ParticleSystem>();
         //  trail.Stop();
         //  input = new Joy();
-       // animator = GetComponentInChildren<Animator>();
+        // animator = GetComponentInChildren<Animator>();
         //  view = GetComponent<PhotonView>();
+        if (OwnerClientId == clientId_test)
+        {
 
+        }
+        else if (OwnerClientId == clientId_test1)
+        {
+
+        }
+       
 
         PlayerData playerData = GameNetworkManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
         playerVisual.SetPlayerColor(GameNetworkManager.Instance.GetPlayerColor(playerData.colorId));
@@ -55,6 +69,11 @@ public class Player : NetworkBehaviour
     
     private void Update()
     {
+        
+
+
+
+
         if (!IsOwner)
         {
             return;
