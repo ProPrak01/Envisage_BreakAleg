@@ -11,10 +11,11 @@ public class characterSelectPlayer : MonoBehaviour
     [SerializeField] private GameObject ready;
     [SerializeField] private PlayerVisual playerVisual;
     [SerializeField] private Text playerNameText;
-    [SerializeField] private Button kickPlayer;
+  //  [SerializeField] private Button kickPlayer;
 
-    private void Awake()
+   /** private void Awake()
     {
+
         kickPlayer.onClick.AddListener(() =>
         {
             PlayerData playerdata = GameNetworkManager.Instance.GetPlayerDataFromPlayerIndex(playerIndex);
@@ -22,6 +23,7 @@ public class characterSelectPlayer : MonoBehaviour
             GameNetworkManager.Instance.KickPlayer(playerdata.clientId);
         });
     }
+   **/
     private void Start()
     {
         GameNetworkManager.Instance.OnPlayerDataNetworkListChanged += GameNetworkMultiplayer_OnPlayerDataNetworkListChanged;

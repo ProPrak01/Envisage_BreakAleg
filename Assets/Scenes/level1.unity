@@ -3529,7 +3529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342, y: 291}
+  m_AnchoredPosition: {x: 322, y: 291}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2103538418
@@ -4333,7 +4333,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -4528,7 +4527,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -5601,7 +5599,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -5904,7 +5901,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -6578,7 +6574,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -6649,7 +6644,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -6760,7 +6754,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -7055,7 +7048,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -7143,7 +7135,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -7333,7 +7324,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}
@@ -7676,7 +7666,7 @@ PrefabInstance:
     - target: {fileID: 2782331546918184928, guid: 047713fdb95944f6cacec2e816557548,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7722,7 +7712,6 @@ MonoBehaviour:
     type: 3}
   numberPrefab4: {fileID: 7119316409313925653, guid: 2518a7d85d8064950a798116eb0e8b23,
     type: 3}
-  choosenPrefab: {fileID: 0}
   attachKey: 101
   glowM: {fileID: 0}
   normalM: {fileID: 0}

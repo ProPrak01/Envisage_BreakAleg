@@ -97,7 +97,7 @@ public class GameNetworkManager : NetworkBehaviour
             colorId = GetFirstUnusedColorId(),
         });
         SetPlayerNameServerRpc(GetPlayerName());
-      //  SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
+       SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
 
     private void NetworkManager_ConnectionApprovalCallback(NetworkManager.ConnectionApprovalRequest connectionApprovalRequest, NetworkManager.ConnectionApprovalResponse connectionApprovalResponse)
@@ -151,7 +151,7 @@ public class GameNetworkManager : NetworkBehaviour
         int playerDataIndex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);
 
         PlayerData playerData = playerDataNetworkList[playerDataIndex];
-       // playerData.colorId = colorId;
+      // playerData.colorId = colorId;
         playerData.playerName = playerName;
 
         playerDataNetworkList[playerDataIndex] = playerData;

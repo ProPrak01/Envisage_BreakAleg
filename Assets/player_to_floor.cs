@@ -46,9 +46,10 @@ public class player_to_floor : NetworkBehaviour
     }
     private void Update()
     {
+        /**
         if (!IsOwner)
             return;
-
+        **/
         if (Input.GetKeyDown(attachKey) && !isAttached)
         {
             TryAttach();
@@ -61,8 +62,11 @@ public class player_to_floor : NetworkBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, 1f); // Adjust the radius as needed
         foreach (Collider collider in colliders)
         {
+            Debug.Log("tryattach_floor");
+
             if (collider.CompareTag(PlayerTag) && (collider.gameObject.transform.childCount > 1) )
             {
+                Debug.Log("tryattach_floor_if");
 
                 // normalM = collider.gameObject.GetComponentInChildren<Renderer>().material;
                 // collider.gameObject.GetComponentInChildren<Renderer>().material = glowM;
@@ -71,18 +75,26 @@ public class player_to_floor : NetworkBehaviour
                 Transform firstChild = collider.transform.GetChild(1); // Get the first child
                 if (firstChild.CompareTag("1"))
                  {
+                    Debug.Log("b1");
+
                     customData.intValue = 1;
                 }
                  else if (firstChild.CompareTag("2"))
                  {
+                    Debug.Log("b2");
+
                     customData.intValue = 2;
                 }
                  else if (firstChild.CompareTag("3"))
                  {
+                    Debug.Log("b3");
+
                     customData.intValue = 3;
                 }
                  else if (firstChild.CompareTag("4"))
                  {
+                    Debug.Log("b4");
+
                     customData.intValue = 4;
                 }
 
@@ -98,7 +110,7 @@ public class player_to_floor : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void SpawnNumberOnServerRpc(string jsonData)
     {
-        Debug.Log("server_running");
+        Debug.Log("server_running_floor");
         CustomData receivedData = JsonUtility.FromJson<CustomData>(jsonData);
 
 
