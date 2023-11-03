@@ -44,9 +44,11 @@ public class Player : NetworkBehaviour
         if (OwnerClientId == clientId_test)
         {
             passClientId_test = clientId_test1;
+
         }
         else if (OwnerClientId == clientId_test1)
         {
+
             passClientId_test = clientId_test;
 
         }
@@ -132,6 +134,8 @@ public class Player : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void SendInputToServerRpc(Vector2 input, ulong passedId)
     {
+        Debug.Log("server_running");
+
         // Apply the input on the server and synchronize it with clients
         MovePlayerClientRpc(input, passedId);
       
@@ -155,9 +159,13 @@ public class Player : NetworkBehaviour
     [ClientRpc]
     private void MovePlayerClientRpc(Vector2 input, ulong passedId)
     {
+        Debug.Log("client_running");
+        Debug.Log("ownerId: " + OwnerClientId+ "   passedId: " + passedId);
+       
         // Exclude the local player (IsOwner) from movement
         if (OwnerClientId == passedId)
         {
+            Debug.Log("client_running_if");
 
             // Apply the movement on all clients
             Vector3 moveDir = new Vector3(input.x , 0f, input.y);
