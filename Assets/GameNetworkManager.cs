@@ -10,7 +10,7 @@ public class GameNetworkManager : NetworkBehaviour
 {
     
 
-    public const int MAX_PLAYER_AMOUNT = 4;
+    public const int MAX_PLAYER_AMOUNT = 2;
     private const string PLAYER_PREFS_PLAYER_NAME_MULTIPLAYER = "PlayerNameMultiplayer";
 
 
@@ -96,7 +96,7 @@ public class GameNetworkManager : NetworkBehaviour
             clientId = clientId,
             colorId = GetFirstUnusedColorId(),
         });
-      //  SetPlayerNameServerRpc(GetPlayerName());
+        SetPlayerNameServerRpc(GetPlayerName());
       //  SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
 
@@ -134,15 +134,24 @@ public class GameNetworkManager : NetworkBehaviour
     {
         SetPlayerNameServerRpc(GetPlayerName());
         SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
-    }
 
+        /**
+        playerDataNetworkList.Add(new PlayerData
+        {
+            clientId = clientId,
+            colorId = GetFirstUnusedColorId(),
+        });
+        SetPlayerNameServerRpc(GetPlayerName());
+        SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
+        **/
+    }
     [ServerRpc(RequireOwnership = false)]
     private void SetPlayerNameServerRpc(string playerName, ServerRpcParams serverRpcParams = default)
     {
         int playerDataIndex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);
 
         PlayerData playerData = playerDataNetworkList[playerDataIndex];
-
+       // playerData.colorId = colorId;
         playerData.playerName = playerName;
 
         playerDataNetworkList[playerDataIndex] = playerData;

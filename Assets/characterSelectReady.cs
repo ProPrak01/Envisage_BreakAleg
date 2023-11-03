@@ -41,6 +41,7 @@ public class characterSelectReady : NetworkBehaviour
         }
         if (allClientsReady)
         {
+            GameLobby.Instance.DeleteLobby();
             NetworkManager.Singleton.SceneManager.LoadScene("level1", loadSceneMode: LoadSceneMode.Single);
         }
     }

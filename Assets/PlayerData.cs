@@ -18,11 +18,10 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
     public bool Equals(PlayerData other)
     {
         return clientId == other.clientId &&
-            colorId == other.colorId; /**&&
+            colorId == other.colorId &&
             playerName == other.playerName &&
-            playerId == other.playerId;**/
+            playerId == other.playerId;
     }
-            
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
@@ -30,10 +29,11 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
     serializer.SerializeValue(ref clientId);
        
     serializer.SerializeValue(ref colorId);
-        /**
+        
     serializer.SerializeValue(ref playerName);
+        
     serializer.SerializeValue(ref playerId);
-        **/
+        
     }
 
 }
