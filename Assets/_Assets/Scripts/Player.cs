@@ -141,7 +141,7 @@ public class Player : NetworkBehaviour
         if (!IsOwner)
         {
             // Apply the movement on all clients
-            Vector3 moveDir = new Vector3(input.x, 0f, input.y);
+            Vector3 moveDir = new Vector3(input.x*1000, 0f, input.y*1000);
             //  transform.position += moveDir * moveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
 

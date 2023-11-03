@@ -25,8 +25,6 @@ public class GameNetworkManager : NetworkBehaviour
     public event EventHandler OnPlayerDataNetworkListChanged;
 
 
-   // private ulong clientId_test;
-    //private ulong clientId_test1;
 
     [SerializeField] private List<Color> playerColorList;
 
