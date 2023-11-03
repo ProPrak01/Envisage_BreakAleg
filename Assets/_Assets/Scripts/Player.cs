@@ -55,6 +55,10 @@ public class Player : NetworkBehaviour
     
     private void Update()
     {
+        if (!IsOwner)
+        {
+            return;
+        }
         animator = GetComponentInChildren<Animator>();
 
         //particle.transform.position = transform.position;
@@ -86,6 +90,7 @@ public class Player : NetworkBehaviour
                     inputVector.x = -1;
                 }
         **/
+
         inputVector.x = Input.GetAxis("Horizontal");
         inputVector.y = Input.GetAxis("Vertical");
         SendInputToServerRpc(inputVector);
