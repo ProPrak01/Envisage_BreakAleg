@@ -25,11 +25,13 @@ public class GameNetworkManager : NetworkBehaviour
     public event EventHandler OnPlayerDataNetworkListChanged;
 
 
-    
+   // private ulong clientId_test;
+    //private ulong clientId_test1;
+
     [SerializeField] private List<Color> playerColorList;
 
 
-    private NetworkList<PlayerData> playerDataNetworkList;
+    public NetworkList<PlayerData> playerDataNetworkList;
     private string playerName;
 
 
@@ -49,6 +51,9 @@ public class GameNetworkManager : NetworkBehaviour
     private void Start()
     {
        
+     //   Debug.Log(clientId_test);
+      //  Debug.Log(clientId_test);
+
     }
 
     public string GetPlayerName()
