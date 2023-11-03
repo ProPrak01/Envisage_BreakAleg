@@ -138,8 +138,7 @@ public class Player : NetworkBehaviour
     private void MovePlayerClientRpc(Vector2 input)
     {
         // Exclude the local player (IsOwner) from movement
-        if (!IsOwner)
-        {
+        
             // Apply the movement on all clients
             Vector3 moveDir = new Vector3(input.x*1000, 0f, input.y*1000);
             //  transform.position += moveDir * moveSpeed * Time.deltaTime;
@@ -153,6 +152,6 @@ public class Player : NetworkBehaviour
             {
                 transform.rotation = Quaternion.LookRotation(moveDir);
             }
-        }
+        
     }
 }
