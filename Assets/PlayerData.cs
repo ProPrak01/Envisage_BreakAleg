@@ -17,8 +17,8 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
 
     public bool Equals(PlayerData other)
     {
-        return clientId == other.clientId; /**&&
-            colorId == other.colorId &&
+        return clientId == other.clientId &&
+            colorId == other.colorId; /**&&
             playerName == other.playerName &&
             playerId == other.playerId;**/
     }
@@ -28,8 +28,9 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
     {
         
     serializer.SerializeValue(ref clientId);
-        /**
+       
     serializer.SerializeValue(ref colorId);
+        /**
     serializer.SerializeValue(ref playerName);
     serializer.SerializeValue(ref playerId);
         **/

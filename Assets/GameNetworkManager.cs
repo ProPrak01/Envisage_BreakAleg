@@ -94,7 +94,7 @@ public class GameNetworkManager : NetworkBehaviour
         playerDataNetworkList.Add(new PlayerData
         {
             clientId = clientId,
-          //  colorId = GetFirstUnusedColorId(),
+            colorId = GetFirstUnusedColorId(),
         });
       //  SetPlayerNameServerRpc(GetPlayerName());
       //  SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);

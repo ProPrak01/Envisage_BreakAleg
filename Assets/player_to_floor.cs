@@ -1,22 +1,31 @@
+using System;
 using Unity.Netcode;
+using Unity.Services.Lobbies.Models;
+using Unity.Services.Relay.Models;
 using UnityEngine;
 
 public class player_to_floor : NetworkBehaviour
 {
+    private CustomData customData;
 
-    public string blockTag1 = "Attacher1";
-    public string blockTag2 = "Attacher2";
+    [Serializable]
+    public class CustomData
+    {
+        public int intValue;
 
-    public string blockTag3 = "Attacher3";
+    }
 
-    public string blockTag4 = "Attacher4";
+
+    public string PlayerTag = "Player";
+
 
     public GameObject numberPrefab;
     public GameObject numberPrefab2;
     public GameObject numberPrefab3;
     public GameObject numberPrefab4;
 
-    public GameObject choosenPrefab;
+  //  public GameObject choosenPrefab;
+
     public KeyCode attachKey = KeyCode.E;
     public Material glowM;
     public Material normalM;
@@ -24,7 +33,17 @@ public class player_to_floor : NetworkBehaviour
     private NetworkObject attachedObject;
 
 
+    private void Start()
+    {
+        // Initialize customData in the Start method or wherever appropriate
+        customData = new CustomData
+        {
+            intValue = 0,
 
+        };
+
+
+    }
     private void Update()
     {
         if (!IsOwner)
@@ -39,49 +58,75 @@ public class player_to_floor : NetworkBehaviour
 
     private void TryAttach()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 1.0f); // Adjust the radius as needed
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 1f); // Adjust the radius as needed
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag(blockTag1) || collider.CompareTag(blockTag2) || collider.CompareTag(blockTag3) || collider.CompareTag(blockTag4))
+            if (collider.CompareTag(PlayerTag) && (collider.gameObject.transform.childCount > 1) )
             {
 
-                normalM = collider.gameObject.GetComponentInChildren<Renderer>().material;
-                collider.gameObject.GetComponentInChildren<Renderer>().material = glowM;
+                // normalM = collider.gameObject.GetComponentInChildren<Renderer>().material;
+                // collider.gameObject.GetComponentInChildren<Renderer>().material = glowM;
 
-                NetworkObject networkObjectToAttach = collider.gameObject.GetComponent<NetworkObject>();
-                if (collider.CompareTag("Attacher1"))
-                {
-                    choosenPrefab = numberPrefab;
+                //  NetworkObject networkObjectToAttach = collider.gameObject.GetComponent<NetworkObject>();
+                Transform firstChild = collider.transform.GetChild(1); // Get the first child
+                if (firstChild.CompareTag("1"))
+                 {
+                    customData.intValue = 1;
                 }
-                else if (collider.CompareTag("Attacher2"))
-                {
-                    choosenPrefab = numberPrefab2;
+                 else if (firstChild.CompareTag("2"))
+                 {
+                    customData.intValue = 2;
                 }
-                else if (collider.CompareTag("Attacher3"))
-                {
-                    choosenPrefab = numberPrefab3;
+                 else if (firstChild.CompareTag("3"))
+                 {
+                    customData.intValue = 3;
                 }
-                else if (collider.CompareTag("Attacher4"))
-                {
-                    choosenPrefab = numberPrefab4;
+                 else if (firstChild.CompareTag("4"))
+                 {
+                    customData.intValue = 4;
                 }
-                SpawnNumberOnServerRpc();
+
+                string jsonData = JsonUtility.ToJson(customData);
+                SpawnNumberOnServerRpc(jsonData);
+                customData.intValue = 0;
+
                 break;
             }
         }
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SpawnNumberOnServerRpc()
+    private void SpawnNumberOnServerRpc(string jsonData)
     {
-
+        Debug.Log("server_running");
+        CustomData receivedData = JsonUtility.FromJson<CustomData>(jsonData);
 
 
         if (!isAttached)
         {
             Debug.Log("bro");
             Vector3 displacement = new Vector3(0f, 3f, 0f);
-            GameObject number = Instantiate(choosenPrefab, transform.position + displacement, Quaternion.identity);
+            GameObject number = null;
+            if (receivedData.intValue == 1)
+            {
+                number = Instantiate(numberPrefab, transform.position + displacement, Quaternion.identity);
+
+            }
+            else if (receivedData.intValue == 2)
+            {
+                number = Instantiate(numberPrefab2, transform.position + displacement, Quaternion.identity);
+
+            }
+            else if (receivedData.intValue == 3)
+            {
+                number = Instantiate(numberPrefab3, transform.position + displacement, Quaternion.identity);
+
+            }
+            else if (receivedData.intValue == 4)
+            {
+                number = Instantiate(numberPrefab4, transform.position + displacement, Quaternion.identity);
+
+            }
             NetworkObject numberNetworkObject = number.GetComponent<NetworkObject>();
 
             if (numberNetworkObject != null)
@@ -111,4 +156,8 @@ public class player_to_floor : NetworkBehaviour
     {
         isAttached = true;
     }
+
+
+
+
 }

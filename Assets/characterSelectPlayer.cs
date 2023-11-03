@@ -36,7 +36,7 @@ public class characterSelectPlayer : MonoBehaviour
             PlayerData playerData = GameNetworkManager.Instance.GetPlayerDataFromPlayerIndex(playerIndex);
             ready.SetActive(characterSelectReady.Instance.IsPlayerReady(playerData.clientId));
 
-            playerVisual.SetPlayerColor(GameNetworkManager.Instance.GetPlayerColor(playerIndex));
+            playerVisual.SetPlayerColor(GameNetworkManager.Instance.GetPlayerColor(playerData.colorId));
         }
         else
         {

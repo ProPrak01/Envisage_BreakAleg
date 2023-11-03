@@ -37,6 +37,10 @@ TagManager:
   - Player2
   - particles
   - Attacher
+  - Attacher1
+  - Attacher2
+  - Attacher3
+  - Attacher4
   layers:
   - Default
   - TransparentFX

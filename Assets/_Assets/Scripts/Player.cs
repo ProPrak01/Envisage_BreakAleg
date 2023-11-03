@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
-//hello
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using static UnityEngine.ParticleSystem;
-//using Photon.Pun;
 
 public class Player : NetworkBehaviour
 {
   //  private ParticleSystem trail;
-    //  PhotonView view;
     [SerializeField] private float moveSpeed = 10f;
     Animator animator;
-    //private Joy input=null;
- //   private NetworkVariable<int> netvariable_temp = new NetworkVariable<int>(2,NetworkVariableReadPermission.Everyone,NetworkVariableWritePermission.Owner);
     public PlayerInputAction playerControls;
     private InputAction move;
     public GameObject particle;
+
+    [SerializeField] PlayerVisual playerVisual;
+
+
     private void Awake()
     {
         
@@ -34,7 +33,11 @@ public class Player : NetworkBehaviour
         //  trail.Stop();
         //  input = new Joy();
         animator = GetComponentInChildren<Animator>();
-      //  view = GetComponent<PhotonView>();
+        //  view = GetComponent<PhotonView>();
+
+
+        PlayerData playerData = GameNetworkManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
+        playerVisual.SetPlayerColor(GameNetworkManager.Instance.GetPlayerColor(playerData.colorId));
     }
    
     /*private void OnEnable()
