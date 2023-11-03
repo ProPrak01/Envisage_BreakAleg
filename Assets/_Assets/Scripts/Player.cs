@@ -131,15 +131,28 @@ public class Player : NetworkBehaviour
     private void SendInputToServerRpc(Vector2 input)
     {
         // Apply the input on the server and synchronize it with clients
-        MovePlayerClientRpc(input);
-    }
+        // MovePlayerClientRpc(input);
 
+        Vector3 moveDir = new Vector3(input.x * 1000, 0f, input.y * 1000);
+        //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
+
+        float rotateSpeed = 10f;
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
+        //  float rotateSpeed = 10f;
+        // Optionally, update the player's rotation based on the movement direction
+        if (moveDir != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(moveDir);
+        }
+
+    }
+    /**
     [ClientRpc]
     private void MovePlayerClientRpc(Vector2 input)
     {
         // Exclude the local player (IsOwner) from movement
-        if (!IsOwner)
-        {
+       
             // Apply the movement on all clients
             Vector3 moveDir = new Vector3(input.x*1000, 0f, input.y*1000);
             //  transform.position += moveDir * moveSpeed * Time.deltaTime;
@@ -154,5 +167,6 @@ public class Player : NetworkBehaviour
                 transform.rotation = Quaternion.LookRotation(moveDir);
             }
         }
-    }
+    **/
+    
 }
