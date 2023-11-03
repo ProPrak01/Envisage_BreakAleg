@@ -88,7 +88,7 @@ public class Player : NetworkBehaviour
 
 
         Vector2 inputVector = new Vector2(0, 0);
-        /**
+        
                 if(Input.GetKey(KeyCode.W))
                 {
                     inputVector.y = +1;
@@ -108,10 +108,10 @@ public class Player : NetworkBehaviour
                 {
                     inputVector.x = -1;
                 }
-        **/
+        
 
-        inputVector.x = Input.GetAxis("Horizontal");
-        inputVector.y = Input.GetAxis("Vertical");
+        //inputVector.x = Input.GetAxis("Horizontal");
+        //inputVector.y = Input.GetAxis("Vertical");
         SendInputToServerRpc(inputVector);
         inputVector = inputVector.normalized;
         
