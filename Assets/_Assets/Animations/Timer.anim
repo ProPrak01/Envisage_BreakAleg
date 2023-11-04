@@ -283,7 +283,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 90.083336
-    functionName: 
+    functionName: GameOver
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
