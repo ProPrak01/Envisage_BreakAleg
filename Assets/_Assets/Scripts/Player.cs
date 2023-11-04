@@ -74,7 +74,7 @@ public class Player : NetworkBehaviour
     }*/
     private bool isWalking;
 
-    private void LateUpdate()
+    private void Update()
     {
 
 
