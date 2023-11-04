@@ -1,9 +1,12 @@
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System.Globalization;
 using Unity.Netcode;
+using UnityEngine;
 using UnityEngine.InputSystem;
+
+using System.Collections.Generic;
+
+
+
 using UnityEngine.EventSystems;
 using static UnityEngine.ParticleSystem;
 
@@ -18,6 +21,9 @@ public class Player : NetworkBehaviour
 
     [SerializeField] PlayerVisual playerVisual;
 
+    private ulong clientId_test;
+    private ulong clientId_test1;
+    private ulong passClientId_test;
 
     private void Awake()
     {
@@ -29,12 +35,25 @@ public class Player : NetworkBehaviour
     {
 
         particle = GameObject.FindGameObjectWithTag("particles");
+        PlayerData playerdata = GameNetworkManager.Instance.GetPlayerDataFromPlayerIndex(0);
+        PlayerData playerdata1 = GameNetworkManager.Instance.GetPlayerDataFromPlayerIndex(1);
 
+        clientId_test = playerdata.clientId;
+        clientId_test1 = playerdata1.clientId;
         // trail = GetComponentInChildren<ParticleSystem>();
         //  trail.Stop();
         //  input = new Joy();
         // animator = GetComponentInChildren<Animator>();
         //  view = GetComponent<PhotonView>();
+        if (OwnerClientId == clientId_test)
+        {
+            passClientId_test = clientId_test1;
+        }
+        else if (OwnerClientId == clientId_test1)
+        {
+            passClientId_test = clientId_test;
+
+        }
 
 
         PlayerData playerData = GameNetworkManager.Instance.GetPlayerDataFromClientId(OwnerClientId);
@@ -56,6 +75,15 @@ public class Player : NetworkBehaviour
 
     private void Update()
     {
+
+
+
+
+
+        if (!IsOwner)
+        {
+            return;
+        }
         animator = GetComponentInChildren<Animator>();
 
         //particle.transform.position = transform.position;
@@ -88,21 +116,69 @@ public class Player : NetworkBehaviour
         }
 
 
+        //inputVector.x = Input.GetAxis("Horizontal");
+        //inputVector.y = Input.GetAxis("Vertical");
+        SendInputToServerRpc(inputVector, passClientId_test);
         inputVector = inputVector.normalized;
 
         //Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        Vector3 movedir2 = new Vector3(inputVector.x, 0, inputVector.y);
-        transform.position += movedir2 * moveSpeed * Time.deltaTime;
+        //  Vector3 movedir2 = new Vector3(inputVector.x, 0, inputVector.y);
+        // transform.position += movedir2 * moveSpeed * Time.deltaTime;
 
-        isWalking = movedir2 != Vector3.zero;
+        //  isWalking = movedir2 != Vector3.zero;
 
-        float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
+
+        // transform.forward = Vector3.Slerp(transform.forward, movedir2, rotateSpeed * Time.deltaTime);
 
 
         animator.SetBool("IsWalking", isWalking);
     }
+    [ServerRpc(RequireOwnership = false)]
+    private void SendInputToServerRpc(Vector2 input, ulong passedId)
+    {
+        // Apply the input on the server and synchronize it with clients
+        MovePlayerClientRpc(input, passedId);
 
+    }
+    /**
+    Vector3 moveDir = new Vector3(input.x * 1000, 0f, input.y * 1000);
+    //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+    transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
+
+    float rotateSpeed = 10f;
+    transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
+    //  float rotateSpeed = 10f;
+    // Optionally, update the player's rotation based on the movement direction
+    if (moveDir != Vector3.zero)
+    {
+        transform.rotation = Quaternion.LookRotation(moveDir);
+    }
+    **/
+
+
+    [ClientRpc]
+    private void MovePlayerClientRpc(Vector2 input, ulong passedId)
+    {
+        Debug.Log("ownerClientId: " + OwnerClientId + " passedId: " + passedId);
+        // Exclude the local player (IsOwner) from movement
+        if (OwnerClientId == passedId)
+        {
+
+            // Apply the movement on all clients
+            Vector3 moveDir = new Vector3(input.x, 0f, input.y);
+            //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
+
+            float rotateSpeed = 10f;
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
+            //  float rotateSpeed = 10f;
+            // Optionally, update the player's rotation based on the movement direction
+            if (moveDir != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(moveDir);
+            }
+        }
+    }
 
 
 }
