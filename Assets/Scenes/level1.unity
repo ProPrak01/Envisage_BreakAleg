@@ -4324,6 +4324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -4518,6 +4520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -5590,6 +5594,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -5892,6 +5898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -6565,6 +6573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -6635,6 +6645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -6745,6 +6757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -7039,6 +7053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -7126,6 +7142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -7315,6 +7333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
@@ -7703,6 +7723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e0118f18a948c6997b35f4a6d409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachertoplayerscript: {fileID: 7477537538426491398, guid: 317cfe2851cf244998bd486088e83dc7,
+    type: 3}
   PlayerTag: Player
   numberPrefab: {fileID: 5431608450906829351, guid: 77e86c306223f40269db5aff084bcf89,
     type: 3}
