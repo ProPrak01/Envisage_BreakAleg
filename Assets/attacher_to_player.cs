@@ -27,7 +27,7 @@ public class attacher_to_player : NetworkBehaviour
     public GameObject numberPrefab2;
     public GameObject numberPrefab3;
     public GameObject numberPrefab4;
-
+    public bool check_touch = false;
    // public GameObject choosenPrefab;
     public KeyCode attachKey = KeyCode.E;
     public Material glowM;
@@ -55,12 +55,19 @@ public class attacher_to_player : NetworkBehaviour
 
     private void Update()
     {
+
+
+       
+
+
+
         if (!IsOwner)
             return;
 
-        if (Input.GetKeyDown(attachKey) && transform.childCount <2)
+        if ((Input.GetKeyDown(attachKey) ||( check_touch = true) )&& transform.childCount <2)
         {
             TryAttach();
+            check_touch = false;
         }
        
     }
@@ -176,4 +183,6 @@ public class attacher_to_player : NetworkBehaviour
     {
        // isAttached = true;
     }
+
+    
 }

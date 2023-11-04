@@ -40,7 +40,7 @@ public class Player : NetworkBehaviour
         playerVisual.SetPlayerColor(GameNetworkManager.Instance.GetPlayerColor(playerData.colorId));
     }
 
-    /*private void OnEnable()
+    private void OnEnable()
     {
         move = playerControls.Player.Move;
         move.Enable();
@@ -50,7 +50,7 @@ public class Player : NetworkBehaviour
     {
         move.Disable();
        // input.Disable();
-    }*/
+    }
     private bool isWalking;
 
     private void Update()
@@ -61,9 +61,9 @@ public class Player : NetworkBehaviour
 
         //     if (!IsOwner) return;
         //Vector2 moveDir = playerControls.ReadValue<Vector2>();
-        //Vector2 moveDir = move.ReadValue<Vector2>();
+        Vector2 moveDir = move.ReadValue<Vector2>();
 
-
+        /**
         Vector2 inputVector = new Vector2(0, 0);
 
         if (Input.GetKey(KeyCode.W))
@@ -85,12 +85,12 @@ public class Player : NetworkBehaviour
         {
             inputVector.x = -1;
         }
-
+        
 
         inputVector = inputVector.normalized;
-
+        **/
         //Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        Vector3 movedir2 = new Vector3(inputVector.x, 0, inputVector.y);
+        Vector3 movedir2 = new Vector3(moveDir.x, 0, moveDir.y);
         transform.position += movedir2 * moveSpeed * Time.deltaTime;
 
         isWalking = movedir2 != Vector3.zero;
