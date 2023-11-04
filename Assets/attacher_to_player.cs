@@ -32,7 +32,7 @@ public class attacher_to_player : NetworkBehaviour
     public KeyCode attachKey = KeyCode.E;
     public Material glowM;
     public Material normalM;
-    private bool isAttached = false;
+  //  public bool isAttached = false;
     private NetworkObject attachedObject;
 
    // private NetworkVariable<int> chooseprefab_no = new NetworkVariable<int>(0);
@@ -58,7 +58,7 @@ public class attacher_to_player : NetworkBehaviour
         if (!IsOwner)
             return;
 
-        if (Input.GetKeyDown(attachKey) && !isAttached)
+        if (Input.GetKeyDown(attachKey) && transform.childCount <2)
         {
             TryAttach();
         }
@@ -123,8 +123,6 @@ public class attacher_to_player : NetworkBehaviour
 
 
 
-        if (!isAttached)
-        {
             Debug.Log("bro");
             Vector3 displacement = new Vector3(0f, 3f, 0f);
             GameObject number = null;
@@ -157,7 +155,7 @@ public class attacher_to_player : NetworkBehaviour
                 AttachToNumber(numberNetworkObject.NetworkObjectId);
                 PerformAttachmentClientRpc();
             }
-        }
+        
     }
 
     private void AttachToNumber(ulong networkObjectId)
@@ -167,7 +165,7 @@ public class attacher_to_player : NetworkBehaviour
         if (numberNetworkObject != null)
         {
             attachedObject = numberNetworkObject;
-            isAttached = true;
+           // isAttached = true;
             numberNetworkObject.transform.SetParent(transform);
             numberNetworkObject.transform.localScale = new Vector3(1f, 1f, 1f);
         }
@@ -176,6 +174,6 @@ public class attacher_to_player : NetworkBehaviour
     [ClientRpc]
     private void PerformAttachmentClientRpc()
     {
-        isAttached = true;
+       // isAttached = true;
     }
 }
