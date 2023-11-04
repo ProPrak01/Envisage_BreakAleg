@@ -162,7 +162,7 @@ public class player_to_floor : NetworkBehaviour
             isAttached = true;
             numberNetworkObject.transform.SetParent(transform);
             numberNetworkObject.transform.localScale = new Vector3(1f, 1f, 1f);
-            numberNetworkObject.transform.rotation =  Quaternion.Euler(0, 180, 0);
+            numberNetworkObject.transform.rotation =  Quaternion.Euler(0, 0, 0);
            // attachertoplayerscript.GetComponent<attacher_to_player>().isAttached = false;
         }
 
