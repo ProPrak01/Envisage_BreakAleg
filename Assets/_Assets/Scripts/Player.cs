@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 using UnityEngine.EventSystems;
 using static UnityEngine.ParticleSystem;
+using UnityEditor.PackageManager;
 
 public class Player : NetworkBehaviour
 {
@@ -138,8 +139,42 @@ public class Player : NetworkBehaviour
     private void SendInputToServerRpc(Vector2 input, ulong passedId)
     {
         // Apply the input on the server and synchronize it with clients
-        MovePlayerClientRpc(input, passedId);
+        NetworkObject[] networkObjects = FindObjectsOfType<NetworkObject>();
 
+        foreach (NetworkObject networkObject in networkObjects)
+        {
+            if (networkObject.OwnerClientId == passedId)
+            {
+                // Access the Transform component of the player object.
+                Transform playerTransform = networkObject.transform;
+
+                // Now you can work with the player's Transform, for example:
+                Vector3 playerPosition = playerTransform.position;
+                Quaternion playerRotation = playerTransform.rotation;
+
+
+
+
+                Vector3 moveDir = new Vector3(input.x, 0f, input.y);
+
+                //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+                playerPosition = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
+
+
+                float rotateSpeed = 10f;
+                playerTransform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
+                //  float rotateSpeed = 10f;
+                // Optionally, update the player's rotation based on the movement direction
+                if (moveDir != Vector3.zero)
+                {
+                    playerRotation = Quaternion.LookRotation(moveDir);
+                }
+
+                // Do something with the player's Transform.
+                break; // Exit the loop since we've found the player object.
+            }
+        }
     }
     /**
     Vector3 moveDir = new Vector3(input.x * 1000, 0f, input.y * 1000);
@@ -156,7 +191,7 @@ public class Player : NetworkBehaviour
     }
     **/
 
-
+    /**
     [ClientRpc]
     private void MovePlayerClientRpc(Vector2 input, ulong passedId)
     {
@@ -179,6 +214,7 @@ public class Player : NetworkBehaviour
 
         
     }
+    **/
 
 
 }
