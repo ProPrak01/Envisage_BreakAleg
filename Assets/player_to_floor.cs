@@ -147,7 +147,7 @@ public class player_to_floor : NetworkBehaviour
 
                 numberNetworkObject.Spawn();
                 AttachToNumber(numberNetworkObject.NetworkObjectId);
-                PerformAttachmentClientRpc();
+                PerformAttachmentClientRpc(numberNetworkObject.NetworkObjectId);
             }
         }
     }
@@ -169,8 +169,10 @@ public class player_to_floor : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void PerformAttachmentClientRpc()
+    private void PerformAttachmentClientRpc(ulong networkObjectId)
     {
+        NetworkObject numberNetworkObject = NetworkManager.Singleton.SpawnManager.SpawnedObjects[networkObjectId];
+
         isAttached = true;
         numberNetworkObject.transform.rotation = Quaternion.Euler(0, 180, 0);
 
