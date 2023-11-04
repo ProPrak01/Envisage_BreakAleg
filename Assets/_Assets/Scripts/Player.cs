@@ -165,7 +165,24 @@ public class Player : NetworkBehaviour
         {
 
             // Apply the movement on all clients
-            Vector3 moveDir = new Vector3(input.x, 0f, input.y);
+            Vector3 moveDir = new Vector3(input.x, 0f, 0f);
+            //  transform.position += moveDir * moveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
+
+            float rotateSpeed = 10f;
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, rotateSpeed * Time.deltaTime);
+            //  float rotateSpeed = 10f;
+            // Optionally, update the player's rotation based on the movement direction
+            if (moveDir != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(moveDir);
+            }
+        }
+        else
+        {
+
+            // Apply the movement on all clients
+            Vector3 moveDir = new Vector3(0f, 0f, input.y);
             //  transform.position += moveDir * moveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, moveSpeed * Time.deltaTime);
 
