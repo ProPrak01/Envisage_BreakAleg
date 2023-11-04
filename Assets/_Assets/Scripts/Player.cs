@@ -45,6 +45,7 @@ public class Player : NetworkBehaviour
         //  input = new Joy();
         // animator = GetComponentInChildren<Animator>();
         //  view = GetComponent<PhotonView>();
+        Debug.Log("host: " + clientId_test + " client: " + clientId_test1);
         if (OwnerClientId == clientId_test)
         {
             passClientId_test = clientId_test1;
