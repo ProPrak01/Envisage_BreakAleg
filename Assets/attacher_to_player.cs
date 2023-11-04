@@ -64,7 +64,7 @@ public class attacher_to_player : NetworkBehaviour
         if (!IsOwner)
             return;
 
-        if ((Input.GetKeyDown(attachKey) ||( check_touch = true) )&& transform.childCount <2)
+        if ((Input.GetKeyDown(attachKey) )&& transform.childCount <2)
         {
             TryAttach();
             check_touch = false;
