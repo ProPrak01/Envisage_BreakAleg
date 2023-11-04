@@ -47,11 +47,11 @@ public class Player : NetworkBehaviour
         //  view = GetComponent<PhotonView>();
         if (OwnerClientId == clientId_test)
         {
-            passClientId_test = clientId_test1;
+            passClientId_test = clientId_test;
         }
         else if (OwnerClientId == clientId_test1)
         {
-            passClientId_test = clientId_test;
+            passClientId_test = clientId_test1;
 
         }
 
